@@ -1,0 +1,70 @@
+
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #1f518c, #0085e2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: cornsilk;
+}
+
+p, label{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+  }
+
+.header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.header a {
+  font-size: 15px;
+  color: aliceblue;
+  margin:3px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header a:hover{
+  color: #1f518c;
+  background-color: white;
+}
+
+h1{
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 57px;
+  }
+
+  #btn2{
+    background-color: #0085e2;
+    color: white;
+    border: 2px solid transparent;
+    padding: 0 3%;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 100%;
+  }
+
+  #btn2:hover{
+    background-color:#1f518c;
+  }

@@ -1,0 +1,25 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'homepage/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="intro1">
+    <h1>Introduction</h1>
+    <p id="info1">WaveEASE combines a passion for education with a drive to make technology truly 
+        supportive for teachers. Our goal is to create tools that lighten the workload, spark 
+        creativity, and give educators more time to focus on what matters most—helping students 
+        thrive.</p>
+    <div class="img1">
+        <img src="{% static 'homepage/images/me.png' %}" alt="Image 1">
+    </div>
+</div>
+
+<div class="img2">
+    <img src="{% static 'homepage/images/teach.png' %}" alt="Image 2">
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'homepage/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="main1">
+    <h1 id="ti1">WAVEEASE AI</h1>
+    <p id="theme">Catch the wave, teach with ease</p>
+    <hr>
+    <div class="btn-cont">
+        <a href="{% url 'homepage:assist' %}" class="btn">Login Here</a>
+    </div>
+</div>
+{% endblock %}

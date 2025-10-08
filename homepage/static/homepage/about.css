@@ -1,0 +1,14 @@
+.intro1{
+    display:flex;
+    justify-content: left;
+    text-align: left;
+    flex-direction: column;
+    width: 50%;
+    margin-left:5%;
+}
+
+.intro1 img{
+    margin-top: -70px;
+    margin-left: -20%;
+}
+

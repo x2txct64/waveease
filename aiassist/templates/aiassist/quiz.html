@@ -1,0 +1,72 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'aiassist/quiz.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>QUIZ MAKER</h1>
+        <div class="opt1">
+            <div class="form-group">
+            <label for="grade">Grade Level:</label>
+            <select id="grade" required>
+                <option value="" disabled selected>Select Grade</option>
+
+                <optgroup label="Elementary">
+                    <option>1st grade</option>
+                    <option>2nd grade</option>
+                    <option>3rd grade</option>
+                    <option>4th grade</option>
+                    <option>5th grade</option>
+                </optgroup>
+
+                <optgroup label="Middle school">
+                    <option>6th grade</option>
+                    <option>7th grade</option>
+                    <option>8th grade</option>
+                </optgroup>
+
+                <optgroup label="High School">
+                    <option>9th grade</option>
+                    <option>10th grade</option>
+                    <option>11th grade</option>
+                    <option>12th grade</option>
+                </optgroup>
+
+                <option>College</option>
+            </select>
+
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Topic:</label>
+                <textarea id="topic" placeholder="Type here" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="objectives">Amount of questions:</label>
+                <textarea id="objectives" placeholder="Type here" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="type">Question type:</label>
+                <textarea id="type" placeholder="Optional"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Quiz timer:</label>
+                <textarea id="time" placeholder="Optional"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="materials">Upload Materials:(optional)</label>
+                <input type="file" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+            </div>
+
+            <div class="backbtn">
+                <button id="btn2">Enter</button>
+            </div>
+        </div>
+{% endblock %}

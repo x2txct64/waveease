@@ -1,0 +1,42 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block title %}Email{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'aiassist/email.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>EMAIL SUPPORT</h1>
+        <div class="opt1">
+            <div class="form-group">
+                <label for="topic">Topic:</label>
+                <textarea id="topic" placeholder="Type here" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="objectives">Who is it addessed to:</label>
+                <textarea id="objectives" placeholder="Type here" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="type">How formal:</label>
+                <textarea id="type" placeholder="Type here" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Additional information:</label>
+                <textarea id="time" placeholder="Optional"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="materials">Upload Materials:(optional)</label>
+                <input type="file" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+            </div>
+
+            <div class="backbtn">
+                <button id="btn2">Enter</button>
+            </div>
+        </div>
+{% endblock %}

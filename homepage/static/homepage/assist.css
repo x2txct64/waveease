@@ -1,0 +1,43 @@
+#ti2{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.options{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    margin-top: 3%;
+}
+
+.option{
+    margin: 5%;
+    padding: 0 5%;
+    outline: 1px solid rgb(55, 240, 247);
+    
+}
+
+.options a{
+    text-decoration: none;
+    color: white;
+}
+
+.option:hover{
+    color: #1f518c;
+    background-color: white;
+    /* border-radius: 20px; */
+    transition: all 0.4s ease;
+}
+
+.bg{
+    /* color: #1f518c;
+    background-color: white; */
+    /* border-radius: 20px; */
+    text-align: center;
+    font-weight: 500;
+    padding: 2%;
+    
+}
+

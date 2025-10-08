@@ -1,0 +1,48 @@
+h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 30vh;
+    margin-bottom: 1vh;
+    font-size: 75px;
+    text-align: center;
+}
+
+#theme{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 0%;
+    font-size: 30px;
+    text-align: center;
+}
+
+hr{
+    width: 80%;
+    margin: 1vh auto;
+}
+
+.btn-cont{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    color: #1f518c;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.but a:hover{
+    color: white;
+    background-color: #1f518c;
+}
