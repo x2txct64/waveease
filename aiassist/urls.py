@@ -8,5 +8,5 @@ urlpatterns = [
     path("rubric/", views.rubric, name = "rubric"),
     path("quiz/", views.quiz, name ="quiz"),
     path("email/", views.email, name ="email"),
-    # path("grade/", views.grade, name ="grade")
+    path("grade/", views.grade, name ="grade"),
 ]

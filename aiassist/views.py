@@ -13,3 +13,6 @@ def quiz(request):
 
 def email(request):
     return render(request, "aiassist/email.html")
+
+def grade(render):
+    return render(request, "aiassist/grade.html")
