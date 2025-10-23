@@ -9,4 +9,5 @@ urlpatterns = [
     path("quiz/", views.quiz, name ="quiz"),
     path("email/", views.email, name ="email"),
     path("grade/", views.grade, name ="grade"),
+    path("level/", views.level, name ="level"),
 ]

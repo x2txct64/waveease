@@ -13,43 +13,62 @@
         <a href="{% url 'aiassist:lesson' %}">
             <div class="option">
                 <p class="bg">Lesson Planner</p>
-                <p>a tool that streamlines lesson preparation 
-                    and ensures a structured, effective teaching plan.</p>
+                <ul>
+                    <li>Streamlines lesson preparation </li>
+                    <li>Ensures a structured and effective teaching plan</li>
+                </ul>
             </div>
         </a>
+
         <a href="{% url 'aiassist:rubric' %}">
             <div class="option">
                 <p class="bg">Rubric</p>
-                <p>a scoring guide that outlines criteria and expectations for an assignment or 
-                    activity, helping teachers assess student work consistently and provide clear 
-                    feedback to students.</p>
+                <ul>
+                    <li>Scoring guide that outlines criteria and expectations for an assignment or 
+                        activity</li>
+                    <li>Helps teachers assess student work consistently and provide clear 
+                        feedback to students.</p>
+                </ul>
             </div>
         </a>
+
         <a href="{% url 'aiassist:quiz' %}">
             <div class="option">
                 <p class="bg">Quiz Maker</p>
-                <p>a tool that allows teachers to create, customize, and administer quizzes 
-                    easily</p>
+                <ul>
+                    <li>Create and customize quizzes easily</li>
+                </ul>
             </div>
         </a>
+
         <a href="{% url 'aiassist:email' %}">
             <div class="option">
-                <p class="bg">Email Support</p>
-                <p>helps you quickly reply to questions and messages with easy to use, ready to send 
-                    emails, saving time and keeping communication simple.</p>
+                <p class="bg">Email Framer</p>
+                <ul>
+                    <li>provides easy to use, ready to send emails</li>
+                    <li>saves time and keeps communication simple.</li>
+                </ul>
             </div>
         </a>
+
         <a href="{% url 'aiassist:grade' %}">
             <div class="option">
                 <p class="bg">Grading Assistant</p>
-                <p>helps teachers quickly review and score student work, making grading faster and 
-                    easier while keeping feedback clear</p>
+                <ul>
+                    <li>Quickly reviews and scores student work</li>
+                    <li>Makes grading faster and easier while keeping feedback clear</li>
+                </ul>
             </div>
         </a>
-        <div class="option">
-            <p class="bg">Text Leveler</p>
-            <p>takes any text and matches it to the appropriate student grade, helping teachers
-                 choose reading material that fits their students’ level.</p>
-        </div>
+
+        <a href="{% url 'aiassist:level' %}">
+            <div class="option">
+                <p class="bg">Text Leveler</p>
+                <ul>
+                    <li>takes any text and matches it to the appropriate student grade</li>
+                    <li>helps teachers choose reading material that fits their students’ level.</p>
+                </ul>
+            </div>
+        </a>
     </div>
 {% endblock %}

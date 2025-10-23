@@ -1,0 +1,67 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block title %}Rubric{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'aiassist/level.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>TEXT LEVELER</h1>
+        <div class="opt1">
+            <div class="form-group">
+            <label for="grade">Grade Level:</label>
+            <select id="grade" required>
+                <option value="" disabled selected>Select Grade</option>
+
+                <optgroup label="Elementary">
+                    <option>1st grade</option>
+                    <option>2nd grade</option>
+                    <option>3rd grade</option>
+                    <option>4th grade</option>
+                    <option>5th grade</option>
+                </optgroup>
+
+                <optgroup label="Middle school">
+                    <option>6th grade</option>
+                    <option>7th grade</option>
+                    <option>8th grade</option>
+                </optgroup>
+
+                <optgroup label="High School">
+                    <option>9th grade</option>
+                    <option>10th grade</option>
+                    <option>11th grade</option>
+                    <option>12th grade</option>
+                </optgroup>
+
+                <option>College</option>
+            </select>
+
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Focus points:</label>
+                <textarea id="topic" placeholder="Optional"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="objectives">Text length:</label>
+                <textarea id="objectives" placeholder="Optional"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="activities">Input text:</label>
+                <textarea id="activities" placeholder="Optional"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="materials">Upload Materials:(optional)</label>
+                <input type="file" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+            </div>
+
+            <div class="backbtn">
+                <button id="btn2">Enter</button>
+            </div>
+        </div>
+{% endblock %}

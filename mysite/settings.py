@@ -55,6 +55,11 @@ ROOT_URLCONF = 'mysite.urls'
 
 import os 
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

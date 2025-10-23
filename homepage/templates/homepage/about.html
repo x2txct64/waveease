@@ -8,18 +8,26 @@
 {% endblock %}
 
 {% block content %}
-<div class="intro1">
-    <h1>Introduction</h1>
-    <p id="info1">WaveEASE combines a passion for education with a drive to make technology truly 
-        supportive for teachers. Our goal is to create tools that lighten the workload, spark 
-        creativity, and give educators more time to focus on what matters most—helping students 
-        thrive.</p>
-    <div class="img1">
-        <img src="{% static 'homepage/images/me.png' %}" alt="Image 1">
+<div class="about_contain">
+    <div class="intro1">
+        <h1>Introduction</h1>
+        <p id="info1">WaveEASE combines a passion for education with a drive to make technology truly 
+            supportive for teachers. Our goal is to create tools that lighten the workload, spark 
+            creativity, and give educators more time to focus on what matters most—helping students 
+            thrive.</p>
+        <div class="img1">
+            <img src="{% static 'homepage/images/me.png' %}" alt="Image 1">
+        </div>
     </div>
-</div>
 
-<div class="img2">
-    <img src="{% static 'homepage/images/teach.png' %}" alt="Image 2">
+
+    <div class="intro2">
+        <div class="img2">
+            <img src="{% static 'homepage/images/teach.png' %}" alt="Image 2">
+        </div>
+        <p id="info2">At WaveEase, we believe teachers deserve powerful, easy-to-use tools that 
+            simplify their daily work. Our mission is to harness the potential of AI to reduce 
+            stress, save time, and bring new energy to classrooms everywhere.</p>
+    </div>
 </div>
 {% endblock %}
