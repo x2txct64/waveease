@@ -24,10 +24,18 @@ def level(request):
 def lesson_planner_view(request):
     result = None
     if request.method == "POST":
-        user_input = request.POST.get("lesson_input", "")
+        user_input = f"""
+        Grade Level: {request.POST.get('grade', '')}
+        Topic: {request.POST.get('topic', '')}
+        Objectives: {request.POST.get('objectives', '')}
+        Activities: {request.POST.get('activities', '')}
+        Assessment: {request.POST.get('assessment', '')}
+        Lesson Duration: {request.POST.get('less-dur', '')}
+        Upload Materials: {request.FILES.get('materials', 'None')}
+        """
         if user_input:
             result = generate_ai_response("lesson_planner", user_input)
-    return render(request, "lesson_planner.html", {"result": result})
+    return render(request, "lesson.html", {"result": result})
 
 
 def rubric_maker_view(request):
@@ -36,7 +44,7 @@ def rubric_maker_view(request):
         user_input = request.POST.get("rubric_input", "")
         if user_input:
             result = generate_ai_response("rubric_maker", user_input)
-    return render(request, "rubric_maker.html", {"result": result})
+    return render(request, "rubric.html", {"result": result})
 
 
 def quiz_maker_view(request):
@@ -45,7 +53,7 @@ def quiz_maker_view(request):
         user_input = request.POST.get("quiz_input", "")
         if user_input:
             result = generate_ai_response("quiz_maker", user_input)
-    return render(request, "quiz_maker.html", {"result": result})
+    return render(request, "quiz.html", {"result": result})
 
 
 def email_framer_view(request):
@@ -54,7 +62,7 @@ def email_framer_view(request):
         user_input = request.POST.get("email_input", "")
         if user_input:
             result = generate_ai_response("email_framer", user_input)
-    return render(request, "email_framer.html", {"result": result})
+    return render(request, "email.html", {"result": result})
 
 
 def grading_assistant_view(request):

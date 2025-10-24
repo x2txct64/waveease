@@ -9,6 +9,8 @@
 
 {% block content %}
     <h1>LESSON PLANNER</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
         <div class="opt1">
             <div class="form-group">
             <label for="grade">Grade Level:</label>
@@ -43,35 +45,41 @@
 
             <div class="form-group">
                 <label for="topic">Topic:</label>
-                <textarea id="topic" placeholder="Type here" required></textarea>
+                <textarea name="topic" id="topic" placeholder="Type here" required></textarea>
             </div>
             <div class="form-group">
                 <label for="objectives">Objectives:</label>
-                <textarea id="objectives" placeholder="Type here" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="activities">Activities:</label>
-                <textarea id="activities" placeholder="Optional"></textarea>
+                <textarea name="objectives" id="objectives" placeholder="Type here" required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="assesment">Assesment:</label>
-                <textarea id="assement" placeholder="Type here"></textarea>
+                <textarea name="assesment" id="assement" placeholder="Type here"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="activities">Activities:</label>
+                <textarea name="activities" id="activities" placeholder="Optional"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="less-dur">Lesson Duration:</label>
-                <input id="less-dur" type="text" placeholder="Type here" required>
+                <textarea name="less-dur" id="less-dur" placeholder="Optional"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="materials">Upload Materials:</label>
-                <input type="file" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+                <input name="materials" type="file" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
             </div>
 
             <div class="backbtn">
-                <button id="btn2">Enter</button>
+                <button type="submit" id="btn2">Enter</button>
             </div>
         </div>
+    </form>
+
+    {% if result %}
+        <h2>AI-Generated Lesson Plan:</h2>
+        <pre>{{ result }}</pre>
+    {% endif %}
 {% endblock %}
