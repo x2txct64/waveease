@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .ai_utils import generate_ai_response
+import markdown
 
 # Create your views here.
 
@@ -31,11 +32,12 @@ def lesson_planner_view(request):
         Activities: {request.POST.get('activities', '')}
         Assessment: {request.POST.get('assessment', '')}
         Lesson Duration: {request.POST.get('less-dur', '')}
-        Upload Materials: {request.FILES.get('materials', 'None')}
+        Upload Materials: (skip for testing)
         """
+
         if user_input:
-            result = generate_ai_response("lesson_planner", user_input)
-    return render(request, "lesson.html", {"result": result})
+            result = markdown.markdown(generate_ai_response("lesson_planner", user_input))
+    return render(request, "aiassist/lesson.html", {"result": result})
 
 
 def rubric_maker_view(request):
