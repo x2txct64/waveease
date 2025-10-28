@@ -1,3 +1,9 @@
+.full-wrap{ 
+    display: flex; 
+    gap: 20px; 
+    padding: 20px; 
+    box-sizing: border-box; }
+
 .opt1{
     color: #1f518c;
     background-color: white;
