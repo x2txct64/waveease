@@ -43,10 +43,16 @@ def lesson_planner_view(request):
 def rubric_maker_view(request):
     result = None
     if request.method == "POST":
-        user_input = request.POST.get("rubric_input", "")
+        user_input = f"""
+        Grade Level: {request.POST.get("grade", '')}
+        Topic: {request.POST.get('topic', '')}
+        Objectives: {request.POST.get('objectives') }
+        Rubric Catagories: {request.POST.get('catagories', '')}
+        Upload Materials: (skip for testing)
+        """
         if user_input:
-            result = generate_ai_response("rubric_maker", user_input)
-    return render(request, "rubric.html", {"result": result})
+            result = markdown.markdown(generate_ai_response("rubric_maker", user_input))
+    return render(request, "aiassist/rubric.html", {"result": result})
 
 
 def quiz_maker_view(request):

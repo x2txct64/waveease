@@ -8,6 +8,7 @@ The teacher will provide:
 4. Assesment (optional)
 5. Activities (optional)
 6. Lesson Duration (optional)
+7. Files (optional)
 
 Your job is to:
 1. Organize information into a clear and complete lesson.

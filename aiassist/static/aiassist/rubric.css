@@ -1,12 +1,32 @@
+.full-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    margin-top: -30px;
+}
+
 .opt1{
+    width: 45%;
     color: #1f518c;
     background-color: white;
-    width: 40%;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    margin-left: 5%;
     padding: 2%;
+    padding-left: 4%;
+    box-sizing: border-box;
+}
+
+.output {
+    width: 50%;
+    white-space: normal;
+    overflow-y: auto;
+    word-wrap: break-word;
+    max-height: 80vh;
 }
 
 .backbtn{
@@ -44,3 +64,10 @@ button{
     display: flex;
     flex-direction: column;
 }
+
+/* .output-lesson{
+    width: 55%;
+    padding: 2%;
+    max-height: 40px;
+    overflow-y: scroll;
+} */

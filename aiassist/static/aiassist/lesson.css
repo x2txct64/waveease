@@ -29,7 +29,6 @@
     max-height: 80vh;
 }
 
-
 .backbtn{
     text-align: center;
 }
@@ -64,12 +63,11 @@ button{
     margin: 2%;
     display: flex;
     flex-direction: column;
-
 }
 
-.output-lesson{
+/* .output-lesson{
     width: 55%;
     padding: 2%;
     max-height: 40px;
     overflow-y: scroll;
-}
+} */
