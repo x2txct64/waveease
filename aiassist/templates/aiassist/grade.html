@@ -12,7 +12,7 @@
         <div class="opt1">
             <div class="form-group">
             <label for="grade">Grade Level:</label>
-            <select id="grade" required>
+            <select name="grade" id="grade" required>
                 <option value="" disabled selected>Select Grade</option>
 
                 <optgroup label="Elementary">
@@ -43,36 +43,36 @@
 
             <div class="form-group">
                 <label for="topic">Topic:</label>
-                <textarea id="topic" placeholder="Type here" required></textarea>
+                <textarea name="topic" id="topic" placeholder="Type here" required></textarea>
             </div>
             <div class="form-group">
                 <label for="type">Type of assignment:</label>
-                <textarea id="type" placeholder="Type here" required></textarea>
+                <textarea name="type" id="type" placeholder="Type here" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="objectives">Learning objective:</label>
-                <textarea id="objectives" placeholder="Type here" required></textarea>
+                <label for="objective">Learning objective:</label>
+                <textarea name="objective" id="objective" placeholder="Type here" required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="elements">Required elements:</label>
-                <textarea id="elements" placeholder="Optional"></textarea>
+                <textarea name="elements" id="elements" placeholder="Optional"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="text">Student text:</label>
-                <textarea id="text" placeholder="Optional"></textarea>
+                <textarea name="text" id="text" placeholder="Optional"></textarea>
             </div>
 
 
             <div class="form-group">
                 <label for="materials">Upload Materials:(optional)</label>
-                <input type="file" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+                <input type="file" name="materials" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
             </div>
 
             <div class="backbtn">
-                <button id="btn2">Enter</button>
+                <button type="submit" id="btn2">Enter</button>
             </div>
         </div>
 {% endblock %}

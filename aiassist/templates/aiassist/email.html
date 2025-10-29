@@ -16,27 +16,27 @@
             </div>
 
             <div class="form-group">
-                <label for="objectives">Who is it addessed to:</label>
-                <textarea id="objectives" placeholder="Type here" required></textarea>
+                <label for="addessed">Who is it addessed to:</label>
+                <textarea name="addressed" id="addessed" placeholder="Type here" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="type">How formal:</label>
-                <textarea id="type" placeholder="Type here" required></textarea>
+                <label for="formal">How Formal:</label>
+                <textarea name="formal" id="type" placeholder="Type here" required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="time">Additional information:</label>
-                <textarea id="time" placeholder="Optional"></textarea>
+                <label for="info">Additional Information:</label>
+                <textarea name="info" id="time" placeholder="Optional"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="materials">Upload Materials:(optional)</label>
-                <input type="file" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+                <input type="file" name="materials" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
             </div>
 
             <div class="backbtn">
-                <button id="btn2">Enter</button>
+                <button type="submit" id="btn2">Enter</button>
             </div>
         </div>
 {% endblock %}

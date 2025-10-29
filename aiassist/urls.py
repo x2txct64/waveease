@@ -6,8 +6,8 @@ app_name = "aiassist"
 urlpatterns = [
     path("lesson-planner/", views.lesson_planner_view, name = "lesson"),
     path("rubric/", views.rubric_maker_view, name = "rubric"),
-    path("quiz/", views.quiz, name ="quiz"),
-    path("email/", views.email, name ="email"),
-    path("grade/", views.grade, name ="grade"),
-    path("level/", views.level, name ="level"),
+    path("quiz/", views.quiz_maker_view, name ="quiz"),
+    path("email/", views.email_framer_view, name ="email"),
+    path("grade/", views.grading_assistant_view, name ="grade"),
+    path("level/", views.grading_assistant_view, name ="level"),
 ]

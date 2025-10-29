@@ -8,8 +8,8 @@
 {% endblock %}
 
 {% block content %}
-    <h1>LESSON PLANNER</h1>
     <div class="full-wrap">
+        <h1>LESSON PLANNER</h1>
         <div class="opt1">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -48,6 +48,7 @@
                     <label for="topic">Topic:</label>
                     <textarea name="topic" id="topic" placeholder="Type here" required></textarea>
                 </div>
+                
                 <div class="form-group">
                     <label for="objectives">Objectives:</label>
                     <textarea name="objectives" id="objectives" placeholder="Type here" required></textarea>
@@ -76,9 +77,10 @@
                 <div class="backbtn">
                     <button type="submit" id="btn2">Enter</button>
                 </div>
+                
             </form>
         </div>
-        
+
         {% if result %}
         <div class="output">
             <h2>AI-Generated Lesson Plan:</h2>

@@ -44,7 +44,7 @@ def rubric_maker_view(request):
     result = None
     if request.method == "POST":
         user_input = f"""
-        Grade Level: {request.POST.get("grade", '')}
+        Grade Level: {request.POST.get('grade', '')}
         Topic: {request.POST.get('topic', '')}
         Objectives: {request.POST.get('objectives') }
         Rubric Catagories: {request.POST.get('catagories', '')}
@@ -58,34 +58,61 @@ def rubric_maker_view(request):
 def quiz_maker_view(request):
     result = None
     if request.method == "POST":
-        user_input = request.POST.get("quiz_input", "")
+        user_input =f"""
+        Grade Level: {request.POST.get('grade', '')}
+        Topic: {request.POST.get('topic', '')}
+        Amount Of Questions: {request.POST.get('amount', '')}
+        Question type: {request.POST.get('question', '')}
+        Quiz Timer: {request.POST.get('type', '')}
+        Upload Materials: (skip for testing)
+        """
         if user_input:
             result = generate_ai_response("quiz_maker", user_input)
-    return render(request, "quiz.html", {"result": result})
+    return render(request, "aiassist/quiz.html", {"result": result})
 
 
 def email_framer_view(request):
     result = None
     if request.method == "POST":
-        user_input = request.POST.get("email_input", "")
+        user_input =f""" 
+        Topic: {request.POST.get('topic', '')}
+        Who is it addressed to: {request.POST.get('addressed', '')}
+        How Formal: {request.POST.get('formal', '')}
+        Additional Information: {request.POST.get('info', '')}
+        Upload Materials: (skip for testing)
+        """
         if user_input:
             result = generate_ai_response("email_framer", user_input)
-    return render(request, "email.html", {"result": result})
+    return render(request, "aiassist/email.html", {"result": result})
 
 
 def grading_assistant_view(request):
     result = None
     if request.method == "POST":
-        user_input = request.POST.get("grading_input", "")
+        user_input =f"""
+        Grade Level: {request.POST.get('grade', '')}
+        Topic: {request.POST.get('topic', '')}
+        Type Of Assignment: {request.POST.get('assignment', '')}
+        Learning Objective: {request.POST.get('objective', '')}
+        Required Elements: {request.POST.get('elements', '')}
+        Student Text: {request.POST.get('elements', '')}
+        Upload Materials: (skip for testing)
+        """
         if user_input:
             result = generate_ai_response("grading_assistant", user_input)
-    return render(request, "grading_assistant.html", {"result": result})
+    return render(request, "aiassist/grading_assistant.html", {"result": result})
 
 
 def text_leveler_view(request):
     result = None
     if request.method == "POST":
-        user_input = request.POST.get("level_input", "")
+        user_input =f"""
+        Grade Level: {request.POST.get('grade', '')}
+        Focus Point: {request.POST.get('focus', '')}
+        Text Length: {request.POST.get('length', '')}
+        Input Length: {request.POST.get('Input Text', '')}
+        Upload Materials: (skip for testing)
+        """
         if user_input:
             result = generate_ai_response("text_leveler", user_input)
-    return render(request, "text_leveler.html", {"result": result})
+    return render(request, "aiassist/text_leveler.html", {"result": result})

@@ -12,7 +12,7 @@
         <div class="opt1">
             <div class="form-group">
             <label for="grade">Grade Level:</label>
-            <select id="grade" required>
+            <select name="grade" id="grade" required>
                 <option value="" disabled selected>Select Grade</option>
 
                 <optgroup label="Elementary">
@@ -42,26 +42,26 @@
             </div>
 
             <div class="form-group">
-                <label for="topic">Focus points:</label>
-                <textarea id="topic" placeholder="Optional"></textarea>
+                <label for="focus">Focus Points:</label>
+                <textarea name="focus" id="focus" placeholder="Optional"></textarea>
             </div>
             <div class="form-group">
-                <label for="objectives">Text length:</label>
-                <textarea id="objectives" placeholder="Optional"></textarea>
+                <label for="length">Text Length:</label>
+                <textarea topic="length" id="length" placeholder="Optional"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="activities">Input text:</label>
-                <textarea id="activities" placeholder="Optional"></textarea>
+                <label for="input">Input Text:</label>
+                <textarea id="input" placeholder="input"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="materials">Upload Materials:(optional)</label>
-                <input type="file" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+                <input type="file" name="materials" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
             </div>
 
             <div class="backbtn">
-                <button id="btn2">Enter</button>
+                <button type="submit" id="btn2">Enter</button>
             </div>
         </div>
 {% endblock %}
