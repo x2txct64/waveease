@@ -8,35 +8,48 @@
 {% endblock %}
 
 {% block content %}
-    <h1>EMAIL FRAMER</h1>
+    <div class="full-wrap">
+        <h1>EMAIL FRAMER</h1>
         <div class="opt1">
-            <div class="form-group">
-                <label for="topic">Topic:</label>
-                <textarea id="topic" placeholder="Type here" required></textarea>
-            </div>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="topic">Topic:</label>
+                    <textarea name="topic" id="topic" placeholder="Type here" required></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="addessed">Who is it addessed to:</label>
-                <textarea name="addressed" id="addessed" placeholder="Type here" required></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="addessed">Who Is It Addessed To:</label>
+                    <textarea name="addressed" id="addessed" placeholder="Type here" required></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="formal">How Formal:</label>
-                <textarea name="formal" id="type" placeholder="Type here" required></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="formal">How Formal:</label>
+                    <textarea name="formal" id="type" placeholder="Type here" required></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="info">Additional Information:</label>
-                <textarea name="info" id="time" placeholder="Optional"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="info">Additional Information:</label>
+                    <textarea name="info" id="time" placeholder="Optional"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="materials">Upload Materials:(optional)</label>
-                <input type="file" name="materials" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
-            </div>
+                <div class="form-group">
+                    <label for="materials">Upload Materials:(optional)</label>
+                    <input type="file" name="materials" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+                </div>
 
-            <div class="backbtn">
-                <button type="submit" id="btn2">Enter</button>
-            </div>
+                <div class="backbtn">
+                    <button type="submit" id="btn2">Enter</button>
+                </div>
+
+            </form>
         </div>
+
+        {% if result %}
+        <div class="output">
+            <h2>AI-Generated Email:</h2>
+            <div class="lesson-output">{{ result|safe }}</div>
+        </div>
+        {% endif %}
+    </div>
 {% endblock %}
