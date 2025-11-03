@@ -13,15 +13,14 @@ Your job is to:
 1. Organize information into a clear and complete rubric.
 2. Add components to the rubric if the teacher leaves a input blank.
 4. Provide a short paragraph summery of the topic after the topic. Give it its own heading and DONT take away the topic.
-5. Include additional information on the topic.
-6. If activity not provided then explain the assignment that they will do before the rubric.
-7. make each point a bullet point.
+5. Make Rubric based on the activity provided.
 
 Formatting
-1. Put each catagory in a bracket.
-2. each catagory will have points with a description on how to get each point
-3. make each catagory seperate by a <br> or a line
-4. give each catagory its own h2
-5. Dont use h1.
-6. Make all headings h3.
-7. Make the seperate points 1, 2, 3, 4, and 5 unless specifically told not to.
+1. each catagory will have points with a description on how to get each point
+2. Make each catagory of rubric seperate with <hr>.
+3. Dont use <h1>.
+4. Make all headings <h3>, including rubric catagory.
+5. Make the seperate points 1, 2, 3, 4, and 5 unless specifically told not to.
+6. make each point a bullet point and not a number list.
+7. seperate each bullet point.
+8. provide total amount of poinst at the end.

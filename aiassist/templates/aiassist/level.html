@@ -8,60 +8,68 @@
 {% endblock %}
 
 {% block content %}
-    <h1>TEXT LEVELER</h1>
+    <div class="full-wrap">
+        <h1>TEXT LEVEL</h1>
         <div class="opt1">
-            <div class="form-group">
-            <label for="grade">Grade Level:</label>
-            <select name="grade" id="grade" required>
-                <option value="" disabled selected>Select Grade</option>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="grade">Grade Level:</label>
+                    <select name="grade" id="grade" required>
+                        <option value="" disabled selected>Select Grade</option>
 
-                <optgroup label="Elementary">
-                    <option>1st grade</option>
-                    <option>2nd grade</option>
-                    <option>3rd grade</option>
-                    <option>4th grade</option>
-                    <option>5th grade</option>
-                </optgroup>
+                        <optgroup label="Elementary">
+                            <option>1st grade</option>
+                            <option>2nd grade</option>
+                            <option>3rd grade</option>
+                            <option>4th grade</option>
+                            <option>5th grade</option>
+                        </optgroup>
 
-                <optgroup label="Middle school">
-                    <option>6th grade</option>
-                    <option>7th grade</option>
-                    <option>8th grade</option>
-                </optgroup>
+                        <optgroup label="Middle school">
+                            <option>6th grade</option>
+                            <option>7th grade</option>
+                            <option>8th grade</option>
+                        </optgroup>
 
-                <optgroup label="High School">
-                    <option>9th grade</option>
-                    <option>10th grade</option>
-                    <option>11th grade</option>
-                    <option>12th grade</option>
-                </optgroup>
+                        <optgroup label="High School">
+                            <option>9th grade</option>
+                            <option>10th grade</option>
+                            <option>11th grade</option>
+                            <option>12th grade</option>
+                        </optgroup>
 
-                <option>College</option>
-            </select>
+                        <option>College</option>
+                    </select>
+                </div>
 
-            </div>
+                <div class="form-group">
+                    <label for="focus">Focus Points:</label>
+                    <textarea name="focus" id="focus" placeholder="Optional"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="focus">Focus Points:</label>
-                <textarea name="focus" id="focus" placeholder="Optional"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="length">Text Length:</label>
-                <textarea topic="length" id="length" placeholder="Optional"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="input">Input Text:</label>
+                    <textarea name="input" id="input" placeholder="Input"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="input">Input Text:</label>
-                <textarea id="input" placeholder="input"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="materials">Upload Materials:(optional)</label>
+                    <input name="materials" type="file" name="materials" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+                </div>
 
-            <div class="form-group">
-                <label for="materials">Upload Materials:(optional)</label>
-                <input type="file" name="materials" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
-            </div>
+                <div class="backbtn">
+                    <button type="submit" id="btn2">Enter</button>
+                </div>
 
-            <div class="backbtn">
-                <button type="submit" id="btn2">Enter</button>
-            </div>
+            </form>
         </div>
+
+        {% if result %}
+        <div class="output">
+            <h2>AI-Generated Text Leveler:</h2>
+            <div class="lesson-output">{{ result|safe }}</div>
+        </div>
+        {% endif %}
+    </div>
 {% endblock %}

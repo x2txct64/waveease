@@ -109,10 +109,9 @@ def text_leveler_view(request):
         user_input =f"""
         Grade Level: {request.POST.get('grade', '')}
         Focus Point: {request.POST.get('focus', '')}
-        Text Length: {request.POST.get('length', '')}
-        Input Length: {request.POST.get('Input Text', '')}
+        Input Text: {request.POST.get('input', '')}
         Upload Materials: (skip for testing)
         """
         if user_input:
             result =  markdown.markdown(generate_ai_response("text_leveler", user_input))
-    return render(request, "aiassist/text.html", {"result": result})
+    return render(request, "aiassist/level.html", {"result": result})

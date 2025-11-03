@@ -9,5 +9,5 @@ urlpatterns = [
     path("quiz/", views.quiz_maker_view, name ="quiz"),
     path("email/", views.email_framer_view, name ="email"),
     path("grade/", views.grading_assistant_view, name ="grade"),
-    path("level/", views.grading_assistant_view, name ="level"),
+    path("level/", views.text_leveler_view, name ="level"),
 ]

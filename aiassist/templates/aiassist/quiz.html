@@ -14,33 +14,33 @@
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
-                <label for="grade">Grade Level:</label>
-                <select name="grade" id="grade" required>
-                    <option value="" disabled selected>Select Grade</option>
+                    <label for="grade">Grade Level:</label>
+                    <select name="grade" id="grade" required>
+                        <option value="" disabled selected>Select Grade</option>
 
-                    <optgroup label="Elementary">
-                        <option>1st grade</option>
-                        <option>2nd grade</option>
-                        <option>3rd grade</option>
-                        <option>4th grade</option>
-                        <option>5th grade</option>
-                    </optgroup>
+                        <optgroup label="Elementary">
+                            <option>1st grade</option>
+                            <option>2nd grade</option>
+                            <option>3rd grade</option>
+                            <option>4th grade</option>
+                            <option>5th grade</option>
+                        </optgroup>
 
-                    <optgroup label="Middle school">
-                        <option>6th grade</option>
-                        <option>7th grade</option>
-                        <option>8th grade</option>
-                    </optgroup>
+                        <optgroup label="Middle school">
+                            <option>6th grade</option>
+                            <option>7th grade</option>
+                            <option>8th grade</option>
+                        </optgroup>
 
-                    <optgroup label="High School">
-                        <option>9th grade</option>
-                        <option>10th grade</option>
-                        <option>11th grade</option>
-                        <option>12th grade</option>
-                    </optgroup>
+                        <optgroup label="High School">
+                            <option>9th grade</option>
+                            <option>10th grade</option>
+                            <option>11th grade</option>
+                            <option>12th grade</option>
+                        </optgroup>
 
-                    <option>College</option>
-                </select>
+                        <option>College</option>
+                    </select>
 
                 </div>
 
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for="amount">Amount Of Questions:</label>
-                    <textarea name="amount" id="amount" placeholder="Type here"></textarea>
+                    <textarea name="amount" id="amount" placeholder="Optional"></textarea>
                 </div>
 
                 <div class="form-group">

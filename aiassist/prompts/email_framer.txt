@@ -17,5 +17,6 @@ Your job is to:
 Formatting:
 1. Never use bulletpoints.
 2. Avoid long paragraphs. Break them into multiple if neeeded.
-3. avoid using h1.
+3. avoid using <h1>.
 4. Make each bulletpoint spaced out.
+5. Seperate each part with a <hr>.
