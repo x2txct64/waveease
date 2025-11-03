@@ -62,5 +62,10 @@ button{
 }
 
 .form-group{
-    margin: 2%;
+    align-items: stretch;
+}
+
+textarea{
+    width: 100%;
+    max-width: none;
 }

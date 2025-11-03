@@ -27,3 +27,5 @@ Formatting
 5. bold the question.
 6. seperate the question and answers.
 7. Place answer sheet at the bottom.
+8. make each question header <h3>.
+9. space out the question and answers.

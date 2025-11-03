@@ -21,6 +21,6 @@ Formatting
 3. Dont use <h1>.
 4. Make all headings <h3>, including rubric catagory.
 5. Make the seperate points 1, 2, 3, 4, and 5 unless specifically told not to.
-6. make each point a bullet point and not a number list.
-7. seperate each bullet point.
-8. provide total amount of poinst at the end.
+6. make the seperate points spaced out.
+7. put the amount of points gained first and make them bullet points.
+8. provide __ / total amount of points at the end.
