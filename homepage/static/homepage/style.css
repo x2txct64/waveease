@@ -40,9 +40,10 @@ hr{
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    padding: 5px;
 }
 
-.but a:hover{
+.btn-cont a:hover{
     color: white;
     background-color: #1f518c;
 }

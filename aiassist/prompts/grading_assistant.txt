@@ -26,4 +26,4 @@ Formatting:
 5. avoid using <h1>.
 6. Make each bulletpoint spaced out.
 7. Always use h3 as subheading.
-8. Make each catagory seperate with <hr>.
+8. Seperate grade, summery, and potential improvements with <hr>.

@@ -21,6 +21,7 @@ Your job is to:
 8. Dont just reuse teacher input, create a lesson plan with your own structure.
 9. provide formative and/or summitive assignments in <h3> heading style.
 10. In activities section, create a day by day timeline for the activities that last for longer than 1 day or create minute based timeline for a lesson that last one day.
+11. DONT make lessons that shouldnt last weeks a week long.
 
 Formatting:
 1. Always use a header for each section.
