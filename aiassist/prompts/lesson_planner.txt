@@ -33,3 +33,4 @@ Formatting:
 8. Use bulletpoints when listing activities and make headings bold words that arent bullet point.
 9. Make each catagory seperate with <hr>.
 10. Always use <h3> for headings.
+11. give every section a header.

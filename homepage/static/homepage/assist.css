@@ -17,6 +17,12 @@
     padding: 0 5%;
     outline: 1px solid white;
     height: 100%;
+    font-size: 90%;
+}
+
+.option li{
+    /* text-align: center;
+    justify-content: center; */
 }
 
 .options a{
@@ -27,14 +33,10 @@
 .option:hover{
     color: #1f518c;
     background-color: white;
-    /* border-radius: 20px; */
     transition: all 0.4s ease;
 }
 
 .bg{
-    /* color: #1f518c;
-    background-color: white; */
-    /* border-radius: 20px; */
     text-align: center;
     font-weight: 500;
     padding: 2%;

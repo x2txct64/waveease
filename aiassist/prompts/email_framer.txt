@@ -19,4 +19,4 @@ Formatting:
 2. Avoid long paragraphs. Break them into multiple if neeeded.
 3. avoid using <h1>.
 4. Make each bulletpoint spaced out.
-5. Seperate each part with a <hr>.
+5. Seperate subject from email with <hr>.

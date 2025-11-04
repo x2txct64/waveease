@@ -1,6 +1,9 @@
 import os
 from openai import OpenAI
 from django.conf import settings
+from django.core.files.storage import FileSystemStorage
+import docx2txt
+import PyPDF2
 
 client = OpenAI(api_key=settings.OPENAI_API_KEY)
 PROMPTS_DIR = os.path.join(os.path.dirname(__file__), "prompts")
@@ -23,3 +26,31 @@ def generate_ai_response(tool: str, user_input: str) -> str:
         ],
     )
     return response.choices[0].message.content
+
+def extract_text(uploaded_file):
+
+    if not uploaded_file:
+        return ""
+    
+    filename = uploaded_file.name.lower()
+    
+    try:
+        if filename.endswith('.pdf'):
+            reader = PyPDF2.PdfReader(uploaded_file)
+            text = "\n".join(
+                [page.extract_text() for page in reader.pages if page.extract_text()]
+            )
+            return text
+        
+        elif filename.endswith('.docx'):
+            return docx2txt.process(uploaded_file)
+        
+        elif filename.endswith('.txt'):
+            return uploaded_file.read().decode('utf-8', errors='ignore')
+        
+        else:
+            return ""
+    
+    except Exception as e:
+        print(f"Error extracting text from {filename}: {e}")
+        return ""
