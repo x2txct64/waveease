@@ -65,7 +65,7 @@ h1{
 }
 
 #btn2{
-  background-color: #0085e2;
+  background-color: #1f518c;
   color: white;
   border: 2px solid transparent;
   padding: 0 3%;
@@ -79,5 +79,5 @@ h1{
 }
 
 #btn2:hover{
-  background-color:#1f518c;
+  background-color:#0e1f32;
 }
