@@ -7,24 +7,8 @@ from .ai_utils import extract_text
 
 # Create your views here.
 
-def lesson(request):
-    return render(request, "aiassist/lesson.html")
 
-def rubric(request):
-    return render(request, "aiassist/rubric.html")
-
-def quiz(request):
-    return render(request, "aiassist/quiz.html")
-
-def email(request):
-    return render(request, "aiassist/email.html")
-
-def grade(request):
-    return render(request, "aiassist/grade.html")
-
-def level(request):
-    return render(request, "aiassist/level.html")
-
+# Gets each imput of user and print ai response in markdown
 def lesson_planner_view(request):
     result = None
     if request.method == "POST":

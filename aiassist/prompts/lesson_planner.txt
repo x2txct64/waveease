@@ -36,3 +36,8 @@ Formatting:
 10. Always use <h3> for headings.
 11. give every section a header.
 12. Make sure that each bullet point is the same.
+
+Additional:
+1. Adjust the difficulty of the lesson based on the grade level.
+    - Make sure that Elementary has easy lessons that they can follow.
+2.  
