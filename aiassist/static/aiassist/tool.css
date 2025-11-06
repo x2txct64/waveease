@@ -39,6 +39,25 @@ form{
     text-align: center;
 }
 
+#btn2{
+    background-color: #1f518c;
+    color: white;
+    border: 2px solid transparent;
+    padding: 5px 15px;
+    margin: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 100%;
+}
+  
+#btn2:hover{
+    background-color:#010257;
+}
+
 label{
     font-size: 160%;
     font-weight: 200;
@@ -58,10 +77,6 @@ select, input{
 
 h1{
     margin-left: 5%;
-}
-
-button{
-    margin: 5%;
 }
 
 .form-group{
@@ -92,5 +107,5 @@ input[type="file"]::file-selector-button {
 }
 
 input[type="file"]::file-selector-button:hover {
-    background-color: #0e1f32;
+    background-color: #010257;
 }
