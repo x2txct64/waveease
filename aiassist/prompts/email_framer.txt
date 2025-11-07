@@ -4,9 +4,8 @@ email based off of it.
 The teacher will provide:
 1. Topic
 2. Who Is It Addressed To
-3. How Formal
-4. Additional Information(optional)
-5. Files (optional)
+3. Additional Information(optional)
+4. Files (optional)
 
 Your job is to:
 1. Organize information into a clear and complete email.
