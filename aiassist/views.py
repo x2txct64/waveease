@@ -16,7 +16,7 @@ def lesson_planner_view(request):
         uploaded_text = extract_text(uploaded_file)
 
         user_input = f"""
-        Grade Level: {request.POST.get('grade', '')}
+        Subject: {request.POST.get('subject', '')}
         Topic: {request.POST.get('topic', '')}
         Objectives: {request.POST.get('objectives', '')}
         Activities: {request.POST.get('activities', '')}
@@ -37,7 +37,7 @@ def rubric_maker_view(request):
         uploaded_text = extract_text(uploaded_file)
 
         user_input = f"""
-        Grade Level: {request.POST.get('grade', '')}
+        Subject: {request.POST.get('subject', '')}
         Topic: {request.POST.get('topic', '')}
         Objectives: {request.POST.get('objectives') }
         Rubric Catagories: {request.POST.get('catagories', '')}
@@ -55,7 +55,7 @@ def quiz_maker_view(request):
         uploaded_text = extract_text(uploaded_file)
 
         user_input =f"""
-        Grade Level: {request.POST.get('grade', '')}
+        Subject: {request.POST.get('subject', '')}
         Topic: {request.POST.get('topic', '')}
         Amount Of Questions: {request.POST.get('amount', '')}
         Question Type: {request.POST.get('type', '')}
@@ -92,7 +92,7 @@ def grading_assistant_view(request):
         uploaded_text = extract_text(uploaded_file)
 
         user_input =f"""
-        Grade Level: {request.POST.get('grade', '')}
+        Subject: {request.POST.get('subject', '')}
         Topic: {request.POST.get('topic', '')}
         Type Of Assignment: {request.POST.get('assignment', '')}
         Learning Objective: {request.POST.get('objective', '')}

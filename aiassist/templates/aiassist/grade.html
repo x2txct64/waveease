@@ -14,17 +14,6 @@
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="grade">Grade Level:</label>
-                    <select name="grade" id="grade" required>
-                        <option value="" disabled selected>Select Grade</option>
-                        <option>Elementary</option>
-                        <option>Middle School</option>
-                        <option>High School</option>
-                        <option>College</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
                     <label for="subject">Subject:</label>
                     <select name="subject" id="subject" required>
                         <option value="" disabled selected>Select Subject</option>
