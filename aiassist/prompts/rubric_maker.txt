@@ -14,6 +14,7 @@ Your job is to:
 2. Add components to the rubric if the teacher leaves a input blank.
 4. Provide a short paragraph summery of the topic after the topic. Give it its own heading and DONT take away the topic.
 5. Make Rubric based on the activity provided.
+6. Provide Rubric catagories that directly match the activity.
 
 Formatting
 1. each catagory will have points with a description on how to get each point

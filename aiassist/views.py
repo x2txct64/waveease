@@ -40,6 +40,7 @@ def rubric_maker_view(request):
         Subject: {request.POST.get('subject', '')}
         Topic: {request.POST.get('topic', '')}
         Objectives: {request.POST.get('objectives') }
+        Activitity: {request.POST.get('activity', '')}
         Rubric Catagories: {request.POST.get('catagories', '')}
         Upload Materials: {uploaded_text}
         """
