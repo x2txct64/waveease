@@ -40,6 +40,15 @@ form{
     padding: 2rem 1.5rem;
 }
 
+.output a{
+    color: #00a2ff;
+}
+
+.output a:hover{
+    color: white;
+    transition: all 0.3s ease;
+}
+
 .backbtn{
     text-align: center;
 }
@@ -50,6 +59,7 @@ form{
     border: 2px solid transparent;
     padding: 5px 15px;
     margin: 15px;
+    margin-top: 20px;
     border-radius: 10px;
     transition: all 0.3s ease;
     font-family: "Montserrat", sans-serif;

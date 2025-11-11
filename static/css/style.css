@@ -2,7 +2,7 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #004da6, #010257);
+  background: linear-gradient(to bottom, #00408a, #010257);
   background-repeat: no-repeat;
   color: white;
 }
@@ -38,7 +38,7 @@ p, label, li{
 }
 
 .header a:hover{
-  color: #1f518c;
+  color: #004da6;
   background-color: white;
 }
 

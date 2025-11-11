@@ -8,7 +8,7 @@ from .ai_utils import extract_text
 # Create your views here.
 
 
-# Gets each imput of user and print ai response in markdown
+# Gets each input of user and print ai response in markdown
 def lesson_planner_view(request):
     result = None
     if request.method == "POST":

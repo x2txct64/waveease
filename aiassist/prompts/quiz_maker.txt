@@ -30,6 +30,7 @@ Formatting:
 9. space out the question and answers.
 10. Dont make the questions a header.
 11. print the quiz difficulty.
+12. give each question only 1 header.
 
 Additional:
 1. Always create a quiz directly related to the topic provided.
@@ -40,3 +41,9 @@ Additional:
    - Suggest one or two related topics within the correct subject instead.
 4. Do not reject or modify the topic for any reason other than subject mismatch.
 5. Keep all output clear, complete, and focused on the topic or the subject explanation.
+6. Adjust question difficulty based on the selected difficulty level (1–5):
+   - Level 1: Very simple — short questions, small numbers, basic definitions, or everyday examples.
+   - Level 2: Easy — introduce one-step reasoning or basic understanding.
+   - Level 3: Moderate — mix of recall and problem-solving questions.
+   - Level 4: Challenging — multi-step questions or deeper reasoning.
+   - Level 5: Advanced — complex reasoning, synthesis, or application to real-world contexts.
