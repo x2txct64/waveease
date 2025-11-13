@@ -64,7 +64,7 @@ Level 5 (Advanced):
    - include real-world or research contexts, including datasets, charts, or visuals.
    - Include equations, derivations, or multi-step computations if applicable.
    - Challenge the student with the most advanced or synthesis-level aspects of the topic.
-   - Each question should at least have 3 sentences, with some having context for the question.
+   - Each question should have at least 3 sentences, with some having context for the question.
    - Level 5 questions require multi-step, layered reasoning or synthesis.
    - Include some sub-questions (a, b, c) that build upon each other.
    - Example of questions to give: "<h3>Question 3</h3> A university wants to identify the top 10% of students based on final exam scores, which are normally distributed with \(\mu = 75\) and \(\sigma = 10\).
