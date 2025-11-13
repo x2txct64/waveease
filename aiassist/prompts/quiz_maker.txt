@@ -42,41 +42,58 @@ Additional:
 5. Keep all output clear, complete, and focused on the topic or the subject explanation.
 Adjust question complexity and reasoning depth, not quantity, based on difficulty level (1–5):
 6. Make sure that all the answers arent the same letter.
-
+7. Mesure the difficulty of each quiz by using the quiz difficulty input. The higher the number, the harder the questions.
 Level 1 (Very Simple):
    - Short, direct questions using basic definitions or everyday examples.
    - No multi-step reasoning.
+
 Level 2 (Easy):
    - Simple one-step reasoning or short explanation questions.
    - Use small numbers and basic scenarios.
+   - Never use multi-step questions.
+   - make more challenging questions that require greater complex thinking.
+   - questions should be challenging for those new to subject.
+
 Level 3 (Moderate):
    - Balanced mix of recall and reasoning.
-   - Include one or two multi-step or concept-connecting questions.
+   - Include 2 sentences in the question for math. Only include one for other subjects.
+   - Only focus on 1-2 items per question
+   - Keep context very simple
+   - make questions short
+
 Level 4 (Challenging):
-   - Same number of questions, but each is longer, multi-part, and more conceptually demanding.
-   - Use real-world contexts, synthesis, or layered reasoning.
-   - If question is related to data sets or visuals, you have to show them.
-   - also include equations if its math.
-   - each question should be long and the most advanced part of the topi
-Level 5 (Advanced):
-   - Each question is longer, multi-step, and conceptually most demanding.
+   - Questions are longer, multi-part, and conceptually demanding.
+   - Include real-world contexts, synthesis, or layered reasoning.
+   - If related to datasets or visuals, include them.     
+   - Include equations if the question is mathematical.
+   - Each question should focus on the most advanced parts of the topic.
+   - Include at least 2 sub-questions that build upon each other for layered reasoning. If it is multiple choice, then the answer must be found by solving the 2 sub-questions.
+   - Include at 2 sentences in the question.
+   - Example question:
+   "A company’s revenue from selling a new product is modeled by the function R(x) = -2x^2 + 160x, where x represents the number of units sold and R(x) is measured in dollars. The company wants to determine optimal sales levels and understand how revenue changes as more units are sold.
+   Tasks:
+   a. Find the critical points of R(x) and classify each as a local maximum or minimum. Then, explain what these points indicate about the company’s potential revenue and how they could guide production decisions.
+   b. Determine the intervals on which R(x) is increasing and decreasing. Discuss what this implies about sales strategy and how the company should adjust the number of units produced to maximize revenue."
+   - Make every question as long as the example i provided.
+
+Level 5 (Advanced / Extreme):
+   - Cover the hardest material of the topic.
+   - Make sure that each question still fall under the topic. Do not include topics from a different subject like including calculus in Pre calculus.
+   - Each question is long, multi-step, and conceptually demanding.
    - Require integration of multiple subtopics, deep reasoning, and analysis.
-   - include real-world or research contexts, including datasets, charts, or visuals.
+   - Include real-world or research contexts, datasets, charts, or visuals.
    - Include equations, derivations, or multi-step computations if applicable.
-   - Challenge the student with the most advanced or synthesis-level aspects of the topic.
-   - Each question should have at least 3 sentences, with some having context for the question.
-   - Level 5 questions require multi-step, layered reasoning or synthesis.
-   - Include some sub-questions (a, b, c) that build upon each other.
-   - Example of questions to give: "<h3>Question 3</h3> A university wants to identify the top 10% of students based on final exam scores, which are normally distributed with \(\mu = 75\) and \(\sigma = 10\).
-      The exam contains 50 questions.
-      Each student’s raw score is the number of correct answers.
-
-      Tasks:
-      Calculate the cutoff score for the top 10% using the z-score formula.
-      Determine how many questions a student must answer correctly to be in the top 10%.
-
-      Answer:
-      A) Cutoff z-score ≈ 1.28; minimum 88 correct answers.
-      B) Cutoff z-score ≈ 1.28; minimum 38 correct answers.
-      C) Cutoff z-score ≈ 1.64; minimum 42 correct answers.
-      D) Cutoff z-score ≈ 1.64; minimum 50 correct answers."
+   - Include at least 4 sub-questions that build upon each other for layered reasoning. If it is multiple choice, then the answer must be found by solving all 4 sub-questions.
+   - Make each question at least 4 sentences.
+   - Example question:
+   "A company’s stock price over time is modeled by S(t) = 0.02t^4 - 0.5t^3 + 4t^2 - 10t + 50, where t is days and S(t) is the stock price in dollars. Analysts want to identify optimal buy and sell points based on local minima and maxima. They also need to evaluate the rate of change of the stock price and points of acceleration/deceleration to manage risk. Full analysis of derivatives, concavity, and trend changes will inform investment strategies.
+   Tasks:
+   a. Find critical points and classify them as local maxima or minima.
+   b. Determine intervals of increasing and decreasing stock prices and interpret in terms of investment decisions.
+   c. Use S''(t) to find inflection points and explain what they indicate about market volatility.
+   d. Propose a small modification to the model coefficients to reduce maximum volatility while keeping overall trend similar."
+   - Make every  question as long as the example I provided.
+- Make sure that the answer sheet is oranized into each question.
+- Seperate each task into bulletpoints.
+- seperate each sub answer into bulletpoints in answer sheet.
+- Space out each bullet point
