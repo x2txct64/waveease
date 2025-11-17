@@ -8,62 +8,79 @@
 {% endblock %}
 
 {% block content %}
-    <div class="full-wrap">
-        <h1>RUBRIC</h1>
-        <div class="opt1">
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <select name="subject" id="subject" required>
-                        <option value="" disabled selected>Select subject</option>
-                        <option>Math</option>
-                        <option>Science</option>
-                        <option>History</option>
-                        <option>English</option>
-                        <option>World Languages</option>
-                        <option>Art</option>
-                        <option>Career and Technical Education</option>
-                    </select>
-                </div>
+<div id="loading-screen">
+    <div class="spinner"></div>
+</div>
 
-                <div class="form-group">
-                    <label for="topic">Topic:</label>
-                    <textarea name="topic" id="topic" placeholder="Type here" required></textarea>
-                </div>
+<div class="full-wrap">
+    <h1>RUBRIC</h1>
+    <div class="opt1">
+        <form id="teach-form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select name="subject" id="subject" required>
+                    <option value="" disabled selected>Select subject</option>
+                    <option>Math</option>
+                    <option>Science</option>
+                    <option>History</option>
+                    <option>English</option>
+                    <option>World Languages</option>
+                    <option>Art</option>
+                    <option>Career and Technical Education</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="objectives">Objectives:</label>
-                    <textarea name="objectives" id="objectives" placeholder="Type here" required></textarea>
-                </div>
+            <div class="form-group">
+                <label for="topic">Topic:</label>
+                <textarea name="topic" id="topic" placeholder="Type here" required></textarea>
+            </div>
 
-                <div class="form-group">
-                    <label for="activity">Activity:</label>
-                    <textarea name="activity" id="activity" placeholder="Type here" required></textarea>
-                </div>
+            <div class="form-group">
+                <label for="objectives">Objectives:</label>
+                <textarea name="objectives" id="objectives" placeholder="Type here" required></textarea>
+            </div>
 
-                <div class="form-group">
-                    <label for="catagories">Rubric Categories:</label>
-                    <textarea name="catagories" id="catagories" placeholder="Optional"></textarea>
-                </div>
+            <div class="form-group">
+                <label for="activity">Activity:</label>
+                <textarea name="activity" id="activity" placeholder="Type here" required></textarea>
+            </div>
 
-                <div class="form-group">
-                    <label for="materials">Upload Materials: (optional)</label>
-                    <input type="file" name="materials" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
-                </div>
+            <div class="form-group">
+                <label for="catagories">Rubric Categories:</label>
+                <textarea name="catagories" id="catagories" placeholder="Optional"></textarea>
+            </div>
 
-                <div class="backbtn">
-                    <button type="submit" id="btn2">Enter</button>
-                </div>
-                
-            </form>
-        </div>
+            <div class="form-group">
+                <label for="materials">Upload Materials: (optional)</label>
+                <input type="file" name="materials" id="materials" accept=".pdf,.doc,.docx,.pptx,.jpg,.png">
+            </div>
 
-        {% if result %}
-        <div class="output">
-            <h2>AI-Generated Rubric:</h2>
-            <div class="lesson-output">{{ result|safe }}</div>
-        </div>
-        {% endif %}
+            <div class="backbtn">
+                <button type="submit" id="btn2">Enter</button>
+            </div>
+            
+        </form>
     </div>
+
+    {% if result %}
+    <div class="output">
+        <h2>AI-Generated Rubric:</h2>
+        <div class="lesson-output">{{ result|safe }}</div>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+    // Show loading screen immediately when user submits the form
+    document.getElementById("teach-form").addEventListener("submit", function() {
+        document.getElementById("loading-screen").style.display = "flex";
+    });
+
+    // Hide loading screen as soon as the new page is fully loaded
+    window.addEventListener("load", function() {
+        const loading = document.getElementById("loading-screen");
+        if (loading) loading.style.display = "none";
+    });
+</script>
 {% endblock %}
