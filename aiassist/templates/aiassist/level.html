@@ -8,10 +8,14 @@
 {% endblock %}
 
 {% block content %}
+<div id="loading-screen">
+    <div class="spinner"></div>
+</div>
+
 <div class="full-wrap">
     <h1>TEXT LEVEL</h1>
     <div class="opt1">
-        <form method="POST" enctype="multipart/form-data">
+        <form id="teach-form" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
                 <label for="grade">Grade Level:</label>
@@ -72,12 +76,25 @@
     // Show loading screen immediately when user submits the form
     document.getElementById("teach-form").addEventListener("submit", function() {
         document.getElementById("loading-screen").style.display = "flex";
+    
+        sessionStorage.setItem("scrollAfterSubmit", "true");
+
     });
 
     // Hide loading screen as soon as the new page is fully loaded
     window.addEventListener("load", function() {
         const loading = document.getElementById("loading-screen");
         if (loading) loading.style.display = "none";
+
+      if (sessionStorage.getItem("scrollAfterSubmit") === "true") {
+        window.scrollTo({
+            top: 900,        // ← scroll amount (change this number)
+            behavior: "smooth"
+        });
+
+        // Remove it so it ONLY happens once
+        sessionStorage.removeItem("scrollAfterSubmit");
+    }
     });
 </script>
 {% endblock %}

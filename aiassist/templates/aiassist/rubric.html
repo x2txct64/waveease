@@ -75,6 +75,8 @@
     // Show loading screen immediately when user submits the form
     document.getElementById("teach-form").addEventListener("submit", function() {
         document.getElementById("loading-screen").style.display = "flex";
+
+        sessionStorage.setItem("scrollAfterSubmit", "true");
     });
 
     // Hide loading screen as soon as the new page is fully loaded
