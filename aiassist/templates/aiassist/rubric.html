@@ -83,6 +83,16 @@
     window.addEventListener("load", function() {
         const loading = document.getElementById("loading-screen");
         if (loading) loading.style.display = "none";
+
+  if (sessionStorage.getItem("scrollAfterSubmit") === "true") {
+    window.scrollTo({
+        top: 900,        // ← scroll amount (change this number)
+        behavior: "smooth"
+    });
+
+    // Remove it so it ONLY happens once
+    sessionStorage.removeItem("scrollAfterSubmit");
+}
     });
 </script>
 {% endblock %}

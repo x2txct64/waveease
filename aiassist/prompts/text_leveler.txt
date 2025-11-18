@@ -15,6 +15,8 @@ Your job is to:
 4. Try to keep the new text around the same length as the old.
 5. Translate text to engilsh if in a different language. Also translate text in key changes made.
 6. Make text as easy as possible for elementary grade students.
+7. dont just make small changes. I want there to be a notible drop in complexity for elementary.
+8. Make the text alot shorter if it is for elementary grade level.
 
 Formatting:
 1. Only use h3 for headings.

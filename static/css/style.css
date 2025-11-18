@@ -50,7 +50,7 @@ h1{
   font-size: 57px;
 }
 
-.output h2, .output h3{
+.output h2, .output h3, .output h4, .output h5{
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -63,4 +63,8 @@ h1{
 
 .output h3{
   font-size: 25px;
+}
+
+.output h4{
+  font-size: 20px;
 }

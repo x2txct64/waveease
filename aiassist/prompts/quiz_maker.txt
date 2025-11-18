@@ -30,6 +30,8 @@ Formatting:
 10. Dont make the questions a header.
 11. print the quiz difficulty.
 12. give each question only 1 header.
+13. seperate the question from the tasks.
+14. make "question:" bold
 
 Additional:
 1. Always create a quiz directly related to the topic provided.

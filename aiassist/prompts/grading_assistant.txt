@@ -27,6 +27,7 @@ Formatting:
 6. Make each bulletpoint spaced out.
 7. Always use h3 as subheading.
 8. Seperate grade, summery, and potential improvements with <hr>.
+9. The work is not the teachers, it is the students. Dont say something like "your work".
 
 Additional:
 1. Always adjust the grading difficulty based on the selected grade level.
