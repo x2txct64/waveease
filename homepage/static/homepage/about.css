@@ -23,10 +23,22 @@
 
 .intro1 .img1{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    margin-top: 12px;
+    align-items:flex-start;
+    justify-content:flex-start;
+    width: 90%;
+    margin-top: 25px;
+    gap: 20px;
+}
+
+.intro1 .creator{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.intro1 .links{
+    width: 100%;
+    gap: 10px;
 }
 
 .intro2{
@@ -54,4 +66,26 @@
 
 #info2{
     max-width: 85%;
+}
+
+#link{
+    text-align: center;
+    width: 70px;
+    color: #1f518c;
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding: 5px 12px;
+}
+  
+#link:hover{
+    color: white;
+    background-color: transparent;
+    border: 1px solid;
 }
