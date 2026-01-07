@@ -97,6 +97,11 @@
         // Remove it so it ONLY happens once
         sessionStorage.removeItem("scrollAfterSubmit");
     }
+
+    if (window.MathJax) {
+            MathJax.typeset();
+    }
+    
         });
     </script>
 {% endblock %}

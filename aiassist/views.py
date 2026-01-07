@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .ai_utils import generate_ai_response
 import markdown
+from markdown.extensions import mdx_math
 from django.core.files.storage import FileSystemStorage
 from .ai_utils import extract_text
 
@@ -26,7 +27,10 @@ def lesson_planner_view(request):
         """
 
         if user_input.strip():
-            result = markdown.markdown(generate_ai_response("lesson_planner", user_input))
+            result = markdown.markdown(
+                generate_ai_response("lesson_planner", user_input),
+                extensions=["pymdownx.arithmatex"]
+                )
     return render(request, "aiassist/lesson.html", {"result": result})
 
 
@@ -45,7 +49,10 @@ def rubric_maker_view(request):
         Upload Materials: {uploaded_text}
         """
         if user_input.strip():
-            result = markdown.markdown(generate_ai_response("rubric_maker", user_input))
+            result = markdown.markdown(
+                generate_ai_response("rubric_maker", user_input),
+                extensions=["pymdownx.arithmatex"]
+                )
     return render(request, "aiassist/rubric.html", {"result": result})
 
 
@@ -64,7 +71,9 @@ def quiz_maker_view(request):
         Upload Materials: {uploaded_text}
         """
         if user_input.strip():
-            result =  markdown.markdown(generate_ai_response("quiz_maker", user_input))
+            result =  markdown.markdown(
+                generate_ai_response("quiz_maker", user_input),
+                extensions=["pymdownx.arithmatex"])
     return render(request, "aiassist/quiz.html", {"result": result})
 
 
@@ -82,7 +91,10 @@ def email_framer_view(request):
         Upload Materials: {uploaded_text}
         """
         if user_input.strip():
-            result =  markdown.markdown(generate_ai_response("email_framer", user_input))
+            result =  markdown.markdown(
+                generate_ai_response("email_framer", user_input),
+                extensions=["pymdownx.arithmatex"]
+                )
     return render(request, "aiassist/email.html", {"result": result})
 
 
@@ -102,7 +114,10 @@ def grading_assistant_view(request):
         Upload Materials: {uploaded_text}
         """
         if user_input.strip():
-            result =  markdown.markdown(generate_ai_response("grading_assistant", user_input))
+            result =  markdown.markdown(
+                generate_ai_response("grading_assistant", user_input),
+                extensions=["pymdownx.arithmatex"]
+                )
     return render(request, "aiassist/grade.html", {"result": result})
 
 
@@ -119,5 +134,8 @@ def text_leveler_view(request):
         Upload Materials: {uploaded_text}
         """
         if user_input.strip():
-            result =  markdown.markdown(generate_ai_response("text_leveler", user_input))
+            result =  markdown.markdown(
+                generate_ai_response("text_leveler", user_input),
+                extensions=["pymdownx.arithmatex"]
+                )
     return render(request, "aiassist/level.html", {"result": result}) 
