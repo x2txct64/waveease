@@ -15,7 +15,7 @@
 .opt1{
     margin: 0 auto;
     width: 70%;
-    color: #1f518c;
+    color:#1f518c;
     background-color: white;
     display: flex;
     align-items: center;
@@ -85,6 +85,11 @@ textarea{
     font-size: 100%;
     text-overflow: auto;
     resize: vertical;
+    background-color: white;
+    outline-color: #1f518c;
+    color: #1f518c;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
 }
 
 select, input{

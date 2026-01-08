@@ -48,11 +48,11 @@ Formatting:
 15. If the lesson takes days, make the days <p>. If the lesson takes weeks then use bullet points.
 16. Make spaces between each bullet point.
 17. Never use <h1> tag.
-20. Do not bold.
+20. Always bold the week in activities timeline.
 21. If the timeline is longer than a week, each bulletpoint should start with "day".
 22. make the day a header over the activity.
 23. Timeline format example: " 
-    Week 1: Introduction to Limits
+    **Week 1: Introduction to Limits**
 
         Day 1: Introduction to limits
 

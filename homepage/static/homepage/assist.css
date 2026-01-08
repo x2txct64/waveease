@@ -37,8 +37,9 @@ body{
 }
 
 .option:hover{
-    color: #1f518c;
-    background-color: white;
+    /* color: #1f518c; */
+    color: white;
+    background-color: rgba(255, 255, 255, 0.144);
     transition: all 0.4s ease;
 }
 

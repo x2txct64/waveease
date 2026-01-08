@@ -2,8 +2,12 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #00408a, #010257);
-  background-repeat: no-repeat;
+  /* background: linear-gradient(to bottom, #00408a, #010257); */
+  /* background: #2a2a9b;*/
+/* background: #a600ff;
+background: linear-gradient(180deg, rgba(193, 87, 199, 1) 0%, rgba(237, 142, 83, 1) 50%, rgba(42, 42, 155, 1) 100%); */
+background: #5100ff;
+background: linear-gradient(180deg, rgba(81, 0, 255, 1) 0%, rgba(57, 140, 212, 1) 51%, rgba(8, 28, 115, 1) 100%);
   color: white;
 }
 
