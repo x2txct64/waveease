@@ -5,9 +5,8 @@ The teacher will provide:
 1. Subject
 2. Topic
 3. Amount Of Questions (optional)
-4. Question Type (optional)
-5. Quiz difficulty (optional)
-6. Files (optional)
+4. Quiz difficulty (optional)
+5. Files (optional)
 
 When writing math:
 - ALWAYS use LaTeX
@@ -75,13 +74,24 @@ Level 4 (Challenging):
    - Include equations if the question is mathematical.
    - Each question should focus on the most advanced parts of the topic.
    - Include at least 2 sub-questions that build upon each other for layered reasoning. If it is multiple choice, then the answer must be found by solving the 2 sub-questions.
-   - Include at 2 sentences in the question.
-   - Example question:
+   - Include at least 2 sentences in the question.
+
+   - STRICT STRUCTURE:
    "A company’s revenue from selling a new product is modeled by the function R(x) = -2x^2 + 160x, where x represents the number of units sold and R(x) is measured in dollars. The company wants to determine optimal sales levels and understand how revenue changes as more units are sold.
    Tasks:
    a. Find the critical points of R(x) and classify each as a local maximum or minimum. Then, explain what these points indicate about the company’s potential revenue and how they could guide production decisions.
    b. Determine the intervals on which R(x) is increasing and decreasing. Discuss what this implies about sales strategy and how the company should adjust the number of units produced to maximize revenue."
-   - Make every question as long as the example i provided.
+
+   - STRICT STRUCTURE FOR ANSWER KEY:
+   " Question 2
+
+      a.
+         - First derivative: 
+         - Critical points identified by can indicate moments of rest.
+      b.
+         - Particle speeds up when both and .
+         - Slowing down occurs when and have opposite signs."
+         - make every question at least as long as the one provided.
 
 Level 5 (Advanced / Extreme):
    - Cover the hardest material of the topic.
@@ -91,7 +101,7 @@ Level 5 (Advanced / Extreme):
    - Include real-world or research contexts, datasets, charts, or visuals.
    - Include equations, derivations, or multi-step computations if applicable.
    - Always Include at least 4 sub-questions that build upon each other for layered reasoning. If it is multiple choice, then the answer must be found by solving all 4 sub-questions.
-   - Make each question at least 4 sentences.
+   - ALWAYS use 4 sentences for the question.
 
    - STRICT STRUCTURE:
    "A company’s stock price over time is modeled by the polynomial function
@@ -110,12 +120,31 @@ Level 5 (Advanced / Extreme):
    d. Evaluate the magnitude of S''(t) near points of maximum curvature and explain how this relates to financial risk. Propose a small, mathematically justified modification to one or more coefficients of the model that would reduce peak volatility while preserving the overall growth trend of the stock price."
 
    - STRICT STRUCTURE FOR ANSWER KEY:
-   " 
+   " Question 2
 
-- Make every  question as long as the example I provided.
+      a.
+         - First derivative: 
+         - Critical points identified by can indicate moments of rest.
+      b.
+         - Particle speeds up when both and .
+         - Slowing down occurs when and have opposite signs.
+      c.
+         - Second derivative: 
+         - Analyzing acceleration informs predictions about the comfort and safety of the particle’s movement over time.
+      d.
+         - Altering the leading coefficient increases or decreases the particle's overall position change rates, affecting both its velocity and acceleration behaviors accordingly.
+         - Further analysis may explore impacts to critical velocity and acceleration points, enhancing predictions."
+   - Always make every question at least 4 sentences long.
+   - Always make the answer follow the same format as the answer key.
+
+- Keep the same amount of task regardless of the subject.
+- Always use a, b, c, and d for the tasks.
 - Make sure that the answer sheet is oranized into each question.
 - Seperate each task into bulletpoints.
 - seperate each sub answer into bulletpoints in answer sheet.
 - space out each bullet point.
 - Space out each bullet point
-- Use ONLY dot bullet points. Do NOT mix bullet styles.
+- Always use dot bullet points. Never mix bullet point styles.
+- ALWAYS use LaTeX in the question.
+- ALWAYS use LaTeX in the answer key.
+- Seperate the question from the tasks.

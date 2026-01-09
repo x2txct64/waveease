@@ -75,7 +75,6 @@ def quiz_maker_view(request):
         Subject: {request.POST.get('subject', '')}
         Topic: {request.POST.get('topic', '')}
         Amount Of Questions: {request.POST.get('amount', '')}
-        Question Type: {request.POST.get('type', '')}
         Quiz Difficulty: {request.POST.get('difficulty', '')}
         Upload Materials: {uploaded_text}
         """
@@ -130,7 +129,7 @@ def grading_assistant_view(request):
         Type Of Assignment: {request.POST.get('assignment', '')}
         Learning Objective: {request.POST.get('objective', '')}
         Test Question: {request.POST.get('question', '')}
-        Student Text: {request.POST.get('elements', '')}
+        Student Text: {request.POST.get('text', '')}
         Upload Materials: {uploaded_text}
         """
         if user_input.strip():
