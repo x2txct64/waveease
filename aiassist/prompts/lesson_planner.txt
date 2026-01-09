@@ -35,7 +35,7 @@ Formatting:
 2. Break sections into sepereate paragraphs.
 3. Use bulletpoints when needed, but avoid only using them.
 4. Avoid long paragraphs.
-5. Never use #.
+5. Never use # or <h1>.
 6. Make each bulletpoint spaced out.
 7. Always use h3 as subheading.
 8. Use bulletpoints when listing activities and make headings bold words that arent bullet point.

@@ -109,8 +109,13 @@ Level 5 (Advanced / Extreme):
 
    d. Evaluate the magnitude of S''(t) near points of maximum curvature and explain how this relates to financial risk. Propose a small, mathematically justified modification to one or more coefficients of the model that would reduce peak volatility while preserving the overall growth trend of the stock price."
 
+   - STRICT STRUCTURE FOR ANSWER KEY:
+   " 
+
 - Make every  question as long as the example I provided.
 - Make sure that the answer sheet is oranized into each question.
 - Seperate each task into bulletpoints.
 - seperate each sub answer into bulletpoints in answer sheet.
+- space out each bullet point.
 - Space out each bullet point
+- Use ONLY dot bullet points. Do NOT mix bullet styles.
