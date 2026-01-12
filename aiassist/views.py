@@ -154,7 +154,6 @@ def text_leveler_view(request):
         user_input =f"""
         Grade Level: {request.POST.get('grade', '')}
         Focus Point: {request.POST.get('focus', '')}
-        Input Text: {request.POST.get('input', '')}
         Upload Materials: {uploaded_text}
         """
         if user_input.strip():
