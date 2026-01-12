@@ -66,6 +66,8 @@ Level 3 (Moderate):
    - Only focus on 1-2 items per question
    - Keep context very simple
    - make questions short
+   - Never use multiple choice.
+   - All level 3 questions are free response. 
 
 Level 4 (Challenging):
    - Questions are longer, multi-part, and conceptually demanding.
@@ -120,20 +122,25 @@ Level 5 (Advanced / Extreme):
    d. Evaluate the magnitude of S''(t) near points of maximum curvature and explain how this relates to financial risk. Propose a small, mathematically justified modification to one or more coefficients of the model that would reduce peak volatility while preserving the overall growth trend of the stock price."
 
    - STRICT STRUCTURE FOR ANSWER KEY:
-   " Question 2
-
+   " 
+   Question 2
+      <br>
       a.
          - First derivative: 
          - Critical points identified by can indicate moments of rest.
+      <br>
       b.
          - Particle speeds up when both and .
          - Slowing down occurs when and have opposite signs.
+      <br>
       c.
          - Second derivative: 
          - Analyzing acceleration informs predictions about the comfort and safety of the particle’s movement over time.
+      <br>
       d.
          - Altering the leading coefficient increases or decreases the particle's overall position change rates, affecting both its velocity and acceleration behaviors accordingly.
          - Further analysis may explore impacts to critical velocity and acceleration points, enhancing predictions."
+      <br>
    - Always make every question at least 4 sentences long.
    - Always make the answer follow the same format as the answer key.
 
@@ -145,6 +152,9 @@ Level 5 (Advanced / Extreme):
 - space out each bullet point.
 - Space out each bullet point
 - Always use dot bullet points. Never mix bullet point styles.
-- ALWAYS use LaTeX in the question.
-- ALWAYS use LaTeX in the answer key.
-- Seperate the question from the tasks.
+- ALWAYS use LaTeX in the answer key and answer sheet.
+- Always use bullet points in answer key.
+- every number needs to use LaTeX.
+- Never use **.
+- **Inline math**: Use `$...$` for math expressions within sentences.
+- **Display math**: Use `$$...$$` for equations on their own lines.
