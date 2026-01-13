@@ -18,8 +18,8 @@ GRADE-LEVEL RULES (STRICT)
 - Disregard any other GRADE-LEVEL RULE but the grade that was selected.
 
 Elementary
-- Each paragraph will be 3 sentences or less.
-- Substitute difficult vocabulary for very simple vocabulary and short sentences.
+- Each paragraph MUST contain EXACTLY 3 sentences.
+- Make ALL words simple.
 - Remove hard ideas.
 - Make ideas concrete and explicit.
 - Ensure a clearly noticeable drop in complexity.
@@ -74,5 +74,3 @@ Additional:
    - Example: If the subject is "Math" but the topic is "Photosynthesis," say:
     “That sounds like a Science topic! Please try a Math topic instead.”
    - Allow for a broad range of topics to fit in a subject such as AP biology for science. 
-
-- Always output the edited text

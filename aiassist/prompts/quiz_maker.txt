@@ -52,6 +52,8 @@ Adjust question complexity and reasoning depth, not quantity, based on difficult
 Level 1 (Very Simple):
    - Short, direct questions using basic definitions or everyday examples.
    - No multi-step reasoning.
+   - Never make an answer choice, like "A", the same 3 times in a row.
+   - Never make more than half of the answer choices the same.
 
 Level 2 (Easy):
    - Simple one-step reasoning or short explanation questions.
@@ -59,6 +61,9 @@ Level 2 (Easy):
    - Never use multi-step questions.
    - make more challenging questions that require greater complex thinking.
    - questions should be challenging for those new to subject.
+   - Never make an answer choice the same 3 times in a row.
+   - Never make more than half of the answer choices the same.
+
 
 Level 3 (Moderate):
    - Balanced mix of recall and reasoning.
@@ -152,9 +157,14 @@ Level 5 (Advanced / Extreme):
 - space out each bullet point.
 - Space out each bullet point
 - Always use dot bullet points. Never mix bullet point styles.
-- ALWAYS use LaTeX in the answer key and answer sheet.
+- ALWAYS use LaTeX in the answers and answer key.
 - Always use bullet points in answer key.
 - every number needs to use LaTeX.
 - Never use **.
 - **Inline math**: Use `$...$` for math expressions within sentences.
 - **Display math**: Use `$$...$$` for equations on their own lines.
+- Only provide the correct answer in the answer key. Dont provide incorrect answers.
+- Always provide the letters A, B, C, and D in the answer key. Make sure the letter is correct.
+- Never make question answers the same as other question answers.
+- ALWAYS seperate questions using <hr>.
+- NEVER make more than 50% of answers "A".
