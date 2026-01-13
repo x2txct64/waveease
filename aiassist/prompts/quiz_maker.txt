@@ -52,8 +52,29 @@ Adjust question complexity and reasoning depth, not quantity, based on difficult
 Level 1 (Very Simple):
    - Short, direct questions using basic definitions or everyday examples.
    - No multi-step reasoning.
-   - Never make an answer choice, like "A", the same 3 times in a row.
-   - Never make more than half of the answer choices the same.
+   - STRUCTURE FOR LEVEL 1:
+   " Question 1
+
+   A. The rate of change of a function
+   B. The total area under a curve
+   C. The maximum value of a function
+   D. The slope of a line
+   <hr>
+   Question 2
+
+   A. 12
+   B. 6
+   C. 8
+   D. 10
+   "
+
+   -STRUCTURE FOR ANSWER KEY:
+   " Question 1: A
+      <br>
+     Question 2: C
+      <br>
+     Question 3: B "
+     - USE NEW LETTER AFTER EVERY ANSWER
 
 Level 2 (Easy):
    - Simple one-step reasoning or short explanation questions.
@@ -63,6 +84,13 @@ Level 2 (Easy):
    - questions should be challenging for those new to subject.
    - Never make an answer choice the same 3 times in a row.
    - Never make more than half of the answer choices the same.
+      -STRUCTURE FOR ANSWER KEY:
+   " Question 1: A
+      <br>
+     Question 2: C
+      <br>
+     Question 3: B "
+     - USE NEW LETTER AFTER EVERY ANSWER
 
 
 Level 3 (Moderate):
@@ -83,13 +111,13 @@ Level 4 (Challenging):
    - Include at least 2 sub-questions that build upon each other for layered reasoning. If it is multiple choice, then the answer must be found by solving the 2 sub-questions.
    - Include at least 2 sentences in the question.
 
-   - STRICT STRUCTURE:
+    - STRUCTURE FOR LEVEL 3:
    "A company’s revenue from selling a new product is modeled by the function R(x) = -2x^2 + 160x, where x represents the number of units sold and R(x) is measured in dollars. The company wants to determine optimal sales levels and understand how revenue changes as more units are sold.
    Tasks:
    a. Find the critical points of R(x) and classify each as a local maximum or minimum. Then, explain what these points indicate about the company’s potential revenue and how they could guide production decisions.
    b. Determine the intervals on which R(x) is increasing and decreasing. Discuss what this implies about sales strategy and how the company should adjust the number of units produced to maximize revenue."
 
-   - STRICT STRUCTURE FOR ANSWER KEY:
+    - STRUCTURE FOR LEVEL 3 ANSWER KEY:
    " Question 2
 
       a.
@@ -110,7 +138,7 @@ Level 5 (Advanced / Extreme):
    - Always Include at least 4 sub-questions that build upon each other for layered reasoning. If it is multiple choice, then the answer must be found by solving all 4 sub-questions.
    - ALWAYS use 4 sentences for the question.
 
-   - STRICT STRUCTURE:
+   - STRUCTURE FOR LEVEL 5:
    "A company’s stock price over time is modeled by the polynomial function
    #formated with LaTeXS (t) = 0.02t^4 − 0.5t^3 + 4t^2 − 10t + 50,
    where t ≥ 0 represents time in days and S(t) represents the stock price in dollars. Financial analysts aim to use calculus-based modeling to identify optimal trading strategies while accounting for volatility, acceleration, and long-term trend behavior.
@@ -125,8 +153,9 @@ Level 5 (Advanced / Extreme):
    c. Compute the second derivative S''(t) and identify all inflection points. Analyze how changes in concavity correspond to periods of increasing or decreasing market volatility.
 
    d. Evaluate the magnitude of S''(t) near points of maximum curvature and explain how this relates to financial risk. Propose a small, mathematically justified modification to one or more coefficients of the model that would reduce peak volatility while preserving the overall growth trend of the stock price."
+   - ALWAYS use 4 sentences in the first paragraph of the question.
 
-   - STRICT STRUCTURE FOR ANSWER KEY:
+   - STRUCTURE FOR LEVEL 5 ANSWER KEY:
    " 
    Question 2
       <br>
@@ -165,6 +194,3 @@ Level 5 (Advanced / Extreme):
 - **Display math**: Use `$$...$$` for equations on their own lines.
 - Only provide the correct answer in the answer key. Dont provide incorrect answers.
 - Always provide the letters A, B, C, and D in the answer key. Make sure the letter is correct.
-- Never make question answers the same as other question answers.
-- ALWAYS seperate questions using <hr>.
-- NEVER make more than 50% of answers "A".
