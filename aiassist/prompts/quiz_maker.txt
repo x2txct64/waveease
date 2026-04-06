@@ -40,8 +40,6 @@ Additional:
 1. Always create a quiz directly related to the topic provided.
 2. If the topic matches the selected subject, continue and create the quiz exactly as given.
    - If the topic does not match the subject, politely explain that it is outside the selected subject and suggest something related instead.
-   - Example: If the subject is "Math" but the topic is "Photosynthesis," say:
-    “That sounds like a Science topic! Please try a Math topic instead.”
    - Allow for a broad range of topics to fit in a subject such as AP biology for science.
 4. Do not reject or modify the topic for any reason other than subject mismatch.
 5. Keep all output clear, complete, and focused on the topic or the subject explanation.
@@ -136,7 +134,7 @@ Level 5 (Advanced / Extreme):
    - Include real-world or research contexts, datasets, charts, or visuals.
    - Include equations, derivations, or multi-step computations if applicable.
    - Always Include at least 4 sub-questions that build upon each other for layered reasoning. If it is multiple choice, then the answer must be found by solving all 4 sub-questions.
-   - ALWAYS use 4 sentences for the question.
+   - ALWAYS use exactly 4 sentences for the question.
 
    - STRUCTURE FOR LEVEL 5:
    "A company’s stock price over time is modeled by the polynomial function
@@ -194,3 +192,4 @@ Level 5 (Advanced / Extreme):
 - **Display math**: Use `$$...$$` for equations on their own lines.
 - Only provide the correct answer in the answer key. Dont provide incorrect answers.
 - Always provide the letters A, B, C, and D in the answer key. Make sure the letter is correct.
+- Make sure to have <hr>
