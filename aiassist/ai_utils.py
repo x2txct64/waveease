@@ -20,7 +20,7 @@ def load_prompt(tool_name):
 def generate_ai_response(tool, user_input):
     system_prompt = load_prompt(tool)
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-5-mini",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_input},
