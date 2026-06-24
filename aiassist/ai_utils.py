@@ -8,7 +8,7 @@ import PyPDF2
 client = OpenAI(api_key=settings.OPENAI_API_KEY)
 PROMPTS_DIR = os.path.join(os.path.dirname(__file__), "prompts")
 
-# Loads prompt
+
 def load_prompt(tool_name):
     file_path = os.path.join(PROMPTS_DIR, f"{tool_name}.txt")
     if not os.path.exists(file_path):
@@ -16,7 +16,6 @@ def load_prompt(tool_name):
     with open(file_path, "r", encoding="utf-8") as f:
         return f.read()
 
-# Ai generates a response based off the prompt
 def generate_ai_response(tool, user_input):
     system_prompt = load_prompt(tool)
     response = client.chat.completions.create(
@@ -28,7 +27,6 @@ def generate_ai_response(tool, user_input):
     )
     return response.choices[0].message.content
 
-# Reads file that is uploaded
 def extract_text(uploaded_file):
 
     if not uploaded_file:
@@ -37,19 +35,19 @@ def extract_text(uploaded_file):
     filename = uploaded_file.name.lower()
     
     try:
-        if filename.endswith('.pdf'): # pdf
+        if filename.endswith('.pdf'):
             reader = PyPDF2.PdfReader(uploaded_file)
             text = "\n".join(
                 [page.extract_text() for page in reader.pages if page.extract_text()]
             )
             return text
         
-        elif filename.endswith('.docx'): # word document
+        elif filename.endswith('.docx'):
             return docx2txt.process(uploaded_file)
         
         else:
             return ""
     
-    except Exception as e: # prevents site from crashing if file error
+    except Exception as e:
         print(f"Error extracting text from {filename}: {e}")
         return ""
