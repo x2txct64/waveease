@@ -1,169 +1,92 @@
 from django.shortcuts import render
-from .ai_utils import generate_ai_response
+from .ai_utils import generate_ai_response, extract_text
 import markdown
-from django.core.files.storage import FileSystemStorage
-from .ai_utils import extract_text
+
+MARKDOWN_CONFIG = {
+    "extensions": ["pymdownx.arithmatex"],
+    "extension_configs": {
+        "pymdownx.arithmatex": {"generic": True}
+    }
+}
 
 
-# Create your views here.
-
-
-# Gets each input of user and print ai response in markdown
-def lesson_planner_view(request):
+def _process_ai_request(request, prompt_type, template_name, fields):
     result = None
     if request.method == "POST":
         uploaded_file = request.FILES.get('materials')
-        uploaded_text = extract_text(uploaded_file)
+        uploaded_text = extract_text(uploaded_file) if uploaded_file else ""
 
-        user_input = f"""
-        Subject: {request.POST.get('subject', '')}
-        Topic: {request.POST.get('topic', '')}
-        Objectives: {request.POST.get('objectives', '')}
-        Activities: {request.POST.get('activities', '')}
-        Assessment: {request.POST.get('assessment', '')}
-        Lesson Duration: {request.POST.get('less-dur', '')}
-        Upload Materials: {uploaded_text}
-        """
+        user_input = "\n".join(
+            f"{label}: {request.POST.get(field_name, '')}"
+            for field_name, label in fields.items()
+        )
+        user_input += f"\nUpload Materials: {uploaded_text}"
 
         if user_input.strip():
             result = markdown.markdown(
-                generate_ai_response("lesson_planner", user_input),
-                extensions=["pymdownx.arithmatex"],
-                extension_configs={
-                    "pymdownx.arithmatex": {
-                        "generic": True
-            }
-        }
-                )
-    return render(request, "aiassist/lesson.html", {"result": result})
+                generate_ai_response(prompt_type, user_input),
+                **MARKDOWN_CONFIG
+            )
+    return render(request, template_name, {"result": result})
+
+
+def lesson_planner_view(request):
+    fields = {
+        "subject": "Subject",
+        "topic": "Topic",
+        "objectives": "Objectives",
+        "activities": "Activities",
+        "assessment": "Assessment",
+        "less-dur": "Lesson Duration",
+    }
+    return _process_ai_request(request, "lesson_planner", "aiassist/lesson.html", fields)
 
 
 def rubric_maker_view(request):
-    result = None
-    if request.method == "POST":
-        uploaded_file = request.FILES.get('materials')
-        uploaded_text = extract_text(uploaded_file)
-
-        user_input = f"""
-        Subject: {request.POST.get('subject', '')}
-        Topic: {request.POST.get('topic', '')}
-        Objectives: {request.POST.get('objectives') }
-        Activitity: {request.POST.get('activity', '')}
-        Rubric Catagories: {request.POST.get('catagories', '')}
-        Upload Materials: {uploaded_text}
-        """
-        if user_input.strip():
-            result = markdown.markdown(
-                generate_ai_response("rubric_maker", user_input),
-                extensions=["pymdownx.arithmatex"],
-                extension_configs={
-                    "pymdownx.arithmatex": {
-                        "generic": True
-            }
-        }
-                )
-    return render(request, "aiassist/rubric.html", {"result": result})
+    fields = {
+        "subject": "Subject",
+        "topic": "Topic",
+        "activity": "Activity",
+        "categories": "Rubric Categories",
+    }
+    return _process_ai_request(request, "rubric_maker", "aiassist/rubric.html", fields)
 
 
 def quiz_maker_view(request):
-    result = None
-    if request.method == "POST":
-        uploaded_file = request.FILES.get('materials')
-        uploaded_text = extract_text(uploaded_file)
-
-        user_input =f"""
-        Subject: {request.POST.get('subject', '')}
-        Topic: {request.POST.get('topic', '')}
-        Amount Of Questions: {request.POST.get('amount', '')}
-        Quiz Difficulty: {request.POST.get('difficulty', '')}
-        Upload Materials: {uploaded_text}
-        """
-        if user_input.strip():
-            result =  markdown.markdown(
-                generate_ai_response("quiz_maker", user_input),
-                extensions=["pymdownx.arithmatex"],
-                extension_configs={
-                    "pymdownx.arithmatex": {
-                        "generic": True
-            }
-        }
-                )
-    return render(request, "aiassist/quiz.html", {"result": result})
+    fields = {
+        "subject": "Subject",
+        "topic": "Topic",
+        "amount": "Amount Of Questions",
+        "difficulty": "Quiz Difficulty",
+    }
+    return _process_ai_request(request, "quiz_maker", "aiassist/quiz.html", fields)
 
 
 def email_framer_view(request):
-    result = None
-    if request.method == "POST":
-        uploaded_file = request.FILES.get('materials')
-        uploaded_text = extract_text(uploaded_file)
-
-        user_input =f""" 
-        Topic: {request.POST.get('topic', '')}
-        Who is it addressed to: {request.POST.get('addressed', '')}
-        How Formal: {request.POST.get('formal', '')}
-        Additional Information: {request.POST.get('info', '')}
-        Upload Materials: {uploaded_text}
-        """
-        if user_input.strip():
-            result =  markdown.markdown(
-                generate_ai_response("email_framer", user_input),
-                extensions=["pymdownx.arithmatex"],
-                extension_configs={
-                    "pymdownx.arithmatex": {
-                        "generic": True
-            }
-        }
-                )
-    return render(request, "aiassist/email.html", {"result": result})
+    fields = {
+        "topic": "Topic",
+        "addressed": "Who is it addressed to",
+        "formal": "How Formal",
+        "info": "Additional Information",
+    }
+    return _process_ai_request(request, "email_framer", "aiassist/email.html", fields)
 
 
 def grading_assistant_view(request):
-    result = None
-    if request.method == "POST":
-        uploaded_file = request.FILES.get('materials')
-        uploaded_text = extract_text(uploaded_file)
-
-        user_input =f"""
-        Subject: {request.POST.get('subject', '')}
-        Topic: {request.POST.get('topic', '')}
-        Type Of Assignment: {request.POST.get('assignment', '')}
-        Learning Objective: {request.POST.get('objective', '')}
-        Test Question: {request.POST.get('question', '')}
-        Student Text: {request.POST.get('text', '')}
-        Upload Materials: {uploaded_text}
-        """
-        if user_input.strip():
-            result =  markdown.markdown(
-                generate_ai_response("grading_assistant", user_input),
-                extensions=["pymdownx.arithmatex"],
-                extension_configs={
-                    "pymdownx.arithmatex": {
-                        "generic": True
-            }
-        }
-                )
-    return render(request, "aiassist/grade.html", {"result": result})
+    fields = {
+        "subject": "Subject",
+        "topic": "Topic",
+        "assignment": "Type Of Assignment",
+        "objective": "Learning Objective",
+        "question": "Test Question",
+        "text": "Student Text",
+    }
+    return _process_ai_request(request, "grading_assistant", "aiassist/grade.html", fields)
 
 
 def text_leveler_view(request):
-    result = None
-    if request.method == "POST":
-        uploaded_file = request.FILES.get('materials')
-        uploaded_text = extract_text(uploaded_file)
-
-        user_input =f"""
-        Grade Level: {request.POST.get('grade', '')}
-        Focus Point: {request.POST.get('focus', '')}
-        Upload Materials: {uploaded_text}
-        """
-        if user_input.strip():
-            result =  markdown.markdown(
-                generate_ai_response("text_leveler", user_input),
-                extensions=["pymdownx.arithmatex"],
-                extension_configs={
-                    "pymdownx.arithmatex": {
-                        "generic": True
-            }
-        }
-                )
-    return render(request, "aiassist/level.html", {"result": result}) 
+    fields = {
+        "grade": "Grade Level",
+        "focus": "Focus Point",
+    }
+    return _process_ai_request(request, "text_leveler", "aiassist/level.html", fields) 

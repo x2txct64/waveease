@@ -35,7 +35,7 @@
                 <label for="topic">Topic:</label>
                 <textarea name="topic" id="topic" placeholder="Type here" required></textarea>
             </div>
-            
+
             <div class="form-group">
                 <label for="objectives">Objectives:</label>
                 <textarea name="objectives" id="objectives" placeholder="Type here" required></textarea>
@@ -64,7 +64,7 @@
             <div class="backbtn">
                 <button type="submit" id="btn2">Enter</button>
             </div>
-            
+
         </form>
     </div>
 
@@ -75,33 +75,33 @@
     </div>
     {% endif %}
 </div>
-    <script>
-        // Show loading screen immediately when user submits the form
-        document.getElementById("teach-form").addEventListener("submit", function() {
-            document.getElementById("loading-screen").style.display = "flex";
+<script>
+    // Show loading screen immediately when user submits the form
+    document.getElementById("teach-form").addEventListener("submit", function () {
+        document.getElementById("loading-screen").style.display = "flex";
 
-            sessionStorage.setItem("scrollAfterSubmit", "true");
-        });
+        sessionStorage.setItem("scrollAfterSubmit", "true");
+    });
 
-        // Hide loading screen as soon as the new page is fully loaded
-        window.addEventListener("load", function() {
-            const loading = document.getElementById("loading-screen");
-            if (loading) loading.style.display = "none";
+    // Hide loading screen as soon as the new page is fully loaded
+    window.addEventListener("load", function () {
+        const loading = document.getElementById("loading-screen");
+        if (loading) loading.style.display = "none";
 
-      if (sessionStorage.getItem("scrollAfterSubmit") === "true") {
-        window.scrollTo({
-            top: 970,        // ← scroll amount (change this number)
-            behavior: "smooth"
-        });
+        if (sessionStorage.getItem("scrollAfterSubmit") === "true") {
+            window.scrollTo({
+                top: 970,        // ← scroll amount (change this number)
+                behavior: "smooth"
+            });
 
-        // Remove it so it ONLY happens once
-        sessionStorage.removeItem("scrollAfterSubmit");
-    }
+            // Remove it so it ONLY happens once
+            sessionStorage.removeItem("scrollAfterSubmit");
+        }
 
-    if (window.MathJax) {
+        if (window.MathJax) {
             MathJax.typeset();
-    }
-    
-        });
-    </script>
+        }
+
+    });
+</script>
 {% endblock %}

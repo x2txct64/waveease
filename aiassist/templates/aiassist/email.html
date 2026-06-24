@@ -54,26 +54,26 @@
 
 <script>
     // Show loading screen immediately when user submits the form
-    document.getElementById("teach-form").addEventListener("submit", function() {
+    document.getElementById("teach-form").addEventListener("submit", function () {
         document.getElementById("loading-screen").style.display = "flex";
 
         sessionStorage.setItem("scrollAfterSubmit", "true");
     });
 
     // Hide loading screen as soon as the new page is fully loaded
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
         const loading = document.getElementById("loading-screen");
         if (loading) loading.style.display = "none";
 
-      if (sessionStorage.getItem("scrollAfterSubmit") === "true") {
-        window.scrollTo({
-            top: 700,        // ← scroll amount (change this number)
-            behavior: "smooth"
-        });
+        if (sessionStorage.getItem("scrollAfterSubmit") === "true") {
+            window.scrollTo({
+                top: 700,        // ← scroll amount (change this number)
+                behavior: "smooth"
+            });
 
-        // Remove it so it ONLY happens once
-        sessionStorage.removeItem("scrollAfterSubmit");
-    }
+            // Remove it so it ONLY happens once
+            sessionStorage.removeItem("scrollAfterSubmit");
+        }
     });
 </script>
 {% endblock %}

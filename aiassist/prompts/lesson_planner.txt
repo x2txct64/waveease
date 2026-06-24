@@ -61,6 +61,7 @@ Formatting Rules:
 - Never write a paragraph for the activity tracker.
 - Always use LaTeX formating.
 - Provide a maximum of 5 bulletpoints for each section.
+- Do not guess the grade level of the topic.
 
 
 Additional Rules:

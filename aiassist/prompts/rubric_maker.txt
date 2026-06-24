@@ -32,24 +32,22 @@ Your job is to:
 ---
 
 Formatting Rules:
-- Each rubric category must have levels describing how points are earned.
-- Each level must include clear descriptions.
-- Put points earned first in each bullet.
-- Provide __ / total points at the end of the rubric.
-- Total points should add up to 100%.
-- Bold the number points.
-- Provide a short sentence for each description.
-
-- Use <h3> for all headings, including rubric categories.
-- Separate each rubric category with <hr>.
-- Do not seperate the header and the bullet points with <hr>
-- Do NOT use <h1>.
-- Do NOT use markdown bold (**) as headings.
-- Keep headings consistent and structured.
-- Space out rubric levels clearly.
-- Never use “-” for bullet points unless it is a sub-point inside a level.
-- Always use LaTeX.
-- Short sentences per bulletpoint.
+- Each rubric category must have levels describing how points are earned
+- Each level must include clear descriptions
+- Put points earned first in each bullet
+- Provide __ / total points at the end of the rubric
+- Total points should add up to 100%
+- Bold the number points
+- Provide a short sentence for each description
+- Use <h3> for all headings, including rubric categories
+- Separate each rubric category with <hr>
+- Do not separate the header and bullet points with <hr>
+- Do NOT use <h1>
+- Do NOT use markdown bold (**) as headings
+- Keep headings consistent and structured
+- Space out rubric levels clearly
+- Use bullet points for main items and dashes for sub-points within levels
+- Use short sentences per bullet point
 
 
 ---

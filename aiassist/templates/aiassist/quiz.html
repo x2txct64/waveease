@@ -45,11 +45,11 @@
                 <label for="difficulty">Quiz Difficulty:</label>
                 <select name="difficulty" id="difficulty" placeholder="Optional">
                     <option value="" disabled selected>Select difficulty</option>
-                    <option>1</option>
+                    <option>1 - easy</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
-                    <option>5</option>
+                    <option>5 - hard</option>
                 </select>
             </div>
 
@@ -74,32 +74,31 @@
 </div>
 
 <script>
-    // Show loading screen immediately when user submits the form
-    document.getElementById("teach-form").addEventListener("submit", function() {
+    // Show loading screen when the user submits the form
+    document.getElementById("teach-form").addEventListener("submit", function () {
         document.getElementById("loading-screen").style.display = "flex";
-
         sessionStorage.setItem("scrollAfterSubmit", "true");
     });
 
     // Hide loading screen as soon as the new page is fully loaded
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
         const loading = document.getElementById("loading-screen");
         if (loading) loading.style.display = "none";
 
-      if (sessionStorage.getItem("scrollAfterSubmit") === "true") {
-        window.scrollTo({
-            top: 900,        // ← scroll amount (change this number)
-            behavior: "smooth"
-        });
+        if (sessionStorage.getItem("scrollAfterSubmit") === "true") {
+            window.scrollTo({
+                top: 900,   // Scroll amount 
+                behavior: "smooth"
+            });
 
-        // Remove it so it ONLY happens once
-        sessionStorage.removeItem("scrollAfterSubmit");
-    }
+            // Remove it so it  happens once
+            sessionStorage.removeItem("scrollAfterSubmit");
+        }
 
-    if (window.MathJax) {
+        if (window.MathJax) {
             MathJax.typeset();
-    }
-    
+        }
+
     });
 </script>
 {% endblock %}
