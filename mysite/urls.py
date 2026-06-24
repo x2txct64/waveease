@@ -25,4 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("homepage.urls")),
     path("ai/", include("aiassist.urls")),
+    path("assist/", include("aiassist.urls")),
+
 ]
