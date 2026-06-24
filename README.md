@@ -17,6 +17,14 @@ Teachers spend hours creating materials for their classes; WaveEase can shave th
 
 **Text Leveler** - Converts any text into versions appropriate for their grade level. Preserves the core meaning while adjusting vocabulary or language to match the grade selected.
 
+## Screenshots
+<img width="1470" height="834" alt="Screenshot 2026-06-24 at 12 53 39 AM" src="https://github.com/user-attachments/assets/a7caaa18-adf8-45b6-9c5f-0bcabe8167f9" />
+<img width="1470" height="835" alt="Screenshot 2026-06-24 at 12 54 02 AM" src="https://github.com/user-attachments/assets/f5314d03-aadb-450b-93ce-11108c71380d" />
+<img width="1470" height="834" alt="Screenshot 2026-06-24 at 1 04 05 AM" src="https://github.com/user-attachments/assets/ae66b1e2-4b16-4177-b652-2b6b7cfec9c8" />
+<img width="1470" height="835" alt="Screenshot 2026-06-24 at 1 07 08 AM" src="https://github.com/user-attachments/assets/420b0dc2-3635-4e1c-b9a3-f9e44fb60da6" />
+
+
+
 ## Tech Stack
 **Python** - Programming language
 
@@ -34,4 +42,12 @@ Teachers spend hours creating materials for their classes; WaveEase can shave th
 6. Run server: python3 manage.py runserver
 7. Open browser: go to localhost URL
 
-## Demo Media
+## Demo Video
+
+https://github.com/user-attachments/assets/91853ad2-0f8e-4f37-a6fc-4035424fb4de
+
+
+
+
+
+
