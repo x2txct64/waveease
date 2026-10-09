@@ -30,7 +30,7 @@ Teachers spend hours creating materials for their classes; WaveEase reduces that
 
 **Backend:** Python, Django
 
-**AI:** OpenAI API (GPT-5o-mini)
+**AI:** OpenAI API (GPT-5-mini)
 
 **Frontend:** HTML, CSS, JavaScript
 
